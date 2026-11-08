@@ -79,6 +79,7 @@
 - 运行环境：重置前确认相关进程都已退出；升级中途被打断时保留要带走的用户文件。安全模式移走危险文件只完成一部分时会如实报告，可以重试剩下的。
 - 文件和分享：很长的文件名按字节截短，不会切开表情，也保留扩展名。
 - 插件开发：插件省略能力参数时按 v1 的默认处理，不再当成空列表（#656）。
+- **新增越南语界面（Tiếng Việt）。** 在「设置 › 外观 › 语言」里选择，选「跟随系统」时系统语言是越南语就用越南语。通知、悬浮胶囊等原生文案和设置页一起跟着变；手机操控的确认卡和无障碍说明也已翻译。
 
 ### English
 
@@ -95,6 +96,7 @@
 - Runtime environment: a reset first makes sure the related processes have exited, and an upgrade interrupted halfway keeps the user files it was carrying over. When safe mode moves dangerous files away and only part of it succeeds, it says so and you can retry the rest.
 - Files and sharing: very long file names are shortened by bytes without splitting emoji, and keep their extension.
 - Plugin development: a plugin that leaves out the capabilities parameter gets the v1 default instead of an empty list (#656).
+- **The interface is now available in Vietnamese (Tiếng Việt).** Choose it under Settings › Appearance › Language; with System selected, a Vietnamese system language uses it. Native text such as notifications and the floating capsule follows too, and the phone-control approval cards and accessibility descriptions are translated as well.
 
 ## 1.0.12 · 2026-11-07
 

@@ -1,0 +1,9 @@
+{
+  "nearbyThisChat": "Hội thoại này",
+  "nearbyPermissionTitle": "Quyền của hội thoại này",
+  "nearbyNewChatDefault": "Hội thoại mới: {name}",
+  "nearbySetAsDefault": "Dùng cho hội thoại mới",
+  "nearbyManageModels": "Quản lý model",
+  "nearbyPermissionPill": "Quyền của hội thoại này: {name}",
+  "nearbyChange": "Thay đổi"
+}

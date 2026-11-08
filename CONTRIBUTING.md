@@ -72,8 +72,8 @@ SDK 的类型检查需要开发依赖 TypeScript；未安装时，相应测试�
 **界面文案：** 修改 `app/lib/l10n/parts/` 的中英文 ARB，再生成并检查：
 
 ```bash
-python3 app/tool/l10n_merge.py
-python3 app/tool/l10n_merge.py --check
+python3 app/tool/l10n_merge.py --locale vi
+python3 app/tool/l10n_merge.py --check --locale vi
 ```
 
 **用户指南：** 修改 `docs/guide/`，同步 App 内置的教学技能：

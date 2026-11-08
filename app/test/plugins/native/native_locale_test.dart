@@ -141,6 +141,27 @@ void main() {
     stream.close();
   });
 
+  test('switching to Vietnamese: plugins hear the bare vi tag', () async {
+    final bridge = _LocaleBridge();
+    final container = ProviderContainer(overrides: nativeOverrides(bridge));
+    addTearDown(container.dispose);
+    final contributions = container.listen(nativeRawContributionsProvider, (_, _) {});
+    final stream = container.listen(nativeStreamProvider, (_, _) {});
+    await container.read(nativeRawContributionsProvider.future);
+
+    await container.read(appLanguageProvider.notifier).set(AppLanguage.vi);
+    // Only Chinese carries a region; Latin languages go out as their bare tag.
+    expect(container.read(nativeLocaleProvider), 'vi');
+    expect(container.read(nativeCapsProvider).locale, 'vi');
+    await container.read(nativeRawContributionsProvider.future);
+    await _settle();
+    expect(bridge.asked.last, 'vi');
+    expect(bridge.streams.last, 'vi');
+
+    contributions.close();
+    stream.close();
+  });
+
   test('following the system: a system language change is heard', () async {
     final binding = TestWidgetsFlutterBinding.instance;
     binding.platformDispatcher.localesTestValue = const [Locale('zh', 'CN')];

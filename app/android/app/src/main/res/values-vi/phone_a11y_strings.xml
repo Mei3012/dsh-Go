@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Chuỗi của dịch vụ trợ năng điều khiển điện thoại (phone/a11y). Để ở tệp riêng
+     để chỉnh sửa chuỗi của các mô-đun khác không đụng vào đây. -->
+<resources>
+    <string name="phone_a11y_label">DSH Điều khiển điện thoại</string>
+    <string name="phone_a11y_description">Chỉ hoạt động khi bạn nhờ DSH làm một việc gì đó trên điện thoại: dịch vụ đọc chữ trên màn hình hiện tại (và chụp ảnh màn hình khi cần), rồi chạm, nhập và vuốt theo yêu cầu của bạn. Nội dung màn hình được gửi tới mô hình DeepSeek mà bạn đã chọn trong DSH. Trong lúc làm việc, một thanh nổi ở trên đầu màn hình cho phép bạn tạm dừng, dừng hoặc chỉnh hướng bất cứ lúc nào; những thao tác như gửi, trả tiền hay xoá sẽ hỏi bạn trước. DSH không bao giờ điền mật khẩu hay mã xác minh, không bao giờ trả tiền thay bạn và không bao giờ đổi cài đặt hệ thống hay quyền.</string>
+    <!-- Thanh điều khiển: bóng, viên nang và thẻ (phone/a11y/OverlayBall.kt, OverlayCapsule.kt); docs/design/phone-overlay.md. -->
+    <string name="overlay_ball_running">DSH đang dùng điện thoại của bạn. Chạm để mở rộng, giữ để dừng</string>
+    <string name="overlay_ball_paused">Đã tạm dừng. Chạm để mở rộng, giữ để dừng</string>
+    <string name="overlay_ball_waiting">DSH đang đợi bạn. Chạm để mở rộng</string>
+    <string name="overlay_ball_stopped">Đã dừng</string>
+    <string name="overlay_collapse">Ẩn chi tiết</string>
+    <string name="overlay_expand">Hiện chi tiết</string>
+    <string name="overlay_fold">Thu nhỏ thành bóng tròn</string>
+    <string name="overlay_fold_row">Thu nhỏ thành bóng tròn</string>
+    <string name="overlay_hold_hint">Giữ bóng tròn một giây để dừng</string>
+    <string name="overlay_stop_description">Dừng thao tác của DSH</string>
+    <string name="overlay_paused_short">Đã tạm dừng</string>
+    <string name="overlay_waiting">Đang đợi bạn ở bên dưới</string>
+    <string name="overlay_waived">Không cần phê duyệt</string>
+    <string name="overlay_meta_separator">" · "</string>
+    <string name="overlay_unlocks_review">Xem lại</string>
+    <string name="overlay_unlock_system">cài đặt hệ thống</string>
+    <string name="overlay_unlock_secrets">mật khẩu và mã xác minh</string>
+    <string name="overlay_unlock_own_app">chính DSH Go</string>
+    <string name="overlay_list_separator">", "</string>
+    <!-- Thao tác dành cho trình đọc màn hình trên bóng, dùng để dừng tác vụ. -->
+    <item type="id" name="overlay_action_stop" />
+</resources>

@@ -44,7 +44,7 @@ class MediaServiceDetailPage extends ConsumerWidget {
     final service = settings == null
         ? null
         : mediaServiceById(mediaServicesOf(settings.valueOf(FieldRef(ns, const ['services']))), serviceId);
-    final title = service == null ? serviceId : mediaServiceTitle(service, presets, english: AppLocale.isEnglish);
+    final title = service == null ? serviceId : mediaServiceTitle(service, presets, english: AppLocale.isLatin);
     return EngineFormScaffold(
       title: title,
       namespaces: [ns],
@@ -77,7 +77,7 @@ class _MediaServiceDetailBody extends ConsumerWidget {
     }
     final presets = mediaPresetsOf(view);
     final preset = mediaPresetForService(presets, service);
-    final english = AppLocale.isEnglish;
+    final english = AppLocale.isLatin;
     final title = mediaServiceTitle(service, presets, english: english);
     final catalog = ref.watch(mediaCatalogProvider);
     final catalogNote = mediaCatalogNote(catalog, l10n);

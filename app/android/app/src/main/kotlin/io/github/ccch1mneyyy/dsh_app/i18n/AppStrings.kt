@@ -10,11 +10,12 @@ import java.util.Locale
  * Native text in the language the app shows (设置 → 语言), not the system's.
  *
  * The Flutter side stores the choice in SharedPreferences as `app_language`
- * (`system` / `zh` / `en`, lib/state/locale_state.dart); here it is
+ * (`system` / `zh` / `en` / `vi`, lib/state/locale_state.dart); here it is
  * `flutter.app_language` in `FlutterSharedPreferences`. `values/` holds
- * English, `values-zh/` Chinese, so "follow the system" is plain resource
- * resolution: any Chinese system language gets Chinese, everything else
- * English, the same rule as AppLocale.resolve in Dart.
+ * English, `values-zh/` Chinese, `values-vi/` Vietnamese, so "follow the
+ * system" is plain resource resolution: any Chinese system language gets
+ * Chinese, everything else a Latin-script language, the same rule as
+ * AppLocale.resolve in Dart.
  */
 object AppStrings {
     /** The app's name as the phone shows it (`android:label` in AndroidManifest.xml), in every
@@ -26,14 +27,14 @@ object AppStrings {
 
     @Volatile private var cache: Pair<String, Context>? = null
 
-    /** `zh`, `en`, or null to follow the system. */
+    /** `zh`, `en`, `vi`, or null to follow the system. */
     fun language(ctx: Context): String? =
         (ctx.applicationContext ?: ctx)
             .getSharedPreferences(PREFS, Context.MODE_PRIVATE)
             .getString(KEY, null)
-            ?.takeIf { it == "zh" || it == "en" }
+            ?.takeIf { it == "zh" || it == "en" || it == "vi" }
 
-    /** True when native text comes out in English. */
+    /** True when native text comes out in English (any Latin-script language). */
     fun isEnglish(ctx: Context): Boolean =
         context(ctx).resources.configuration.locales[0].language != "zh"
 
@@ -42,7 +43,11 @@ object AppStrings {
         val app = ctx.applicationContext ?: ctx
         val lang = language(app) ?: return app
         cache?.let { (l, c) -> if (l == lang) return c }
-        val locale = if (lang == "zh") Locale.SIMPLIFIED_CHINESE else Locale.ENGLISH
+        val locale = when (lang) {
+            "zh" -> Locale.SIMPLIFIED_CHINESE
+            "vi" -> Locale.forLanguageTag("vi-VN")
+            else -> Locale.ENGLISH
+        }
         val config = Configuration(app.resources.configuration).apply { setLocale(locale) }
         return app.createConfigurationContext(config).also { cache = lang to it }
     }

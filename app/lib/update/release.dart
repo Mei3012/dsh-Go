@@ -297,8 +297,11 @@ Map<String, String> parseSha256Sums(String text) {
 /// first, else that language's section of notes written as
 /// `### 中文 … ### English …` (the changelog's form); Chinese when there is
 /// nothing in [language]; the notes as they are when they have no sections.
+///
+/// Only Chinese and English notes are written, so every Latin-script UI
+/// language (English, Vietnamese) reads the English ones.
 String releaseNotesFor(ReleaseInfo release, String language) {
-  final lang = language == 'en' ? 'en' : 'zh';
+  final lang = language == 'zh' ? 'zh' : 'en';
   final split = release.notesByLocale;
   if (split[lang]?.trim() case final text? when text.isNotEmpty) return text;
   if (split['zh']?.trim() case final text? when text.isNotEmpty) return text;

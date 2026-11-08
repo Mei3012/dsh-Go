@@ -27,7 +27,7 @@ docs/                        架构、发布、路线图、用户指南
 (cd packages/dsh_remote && dart pub get && dart analyze && dart test)
 (cd sdk/plugin-kit && npm install && npm test)
 node --test runtime/tests/*.test.mjs                               # 引擎桥/补丁测试
-python3 app/tool/l10n_merge.py --check                             # 文案生成检查
+python3 app/tool/l10n_merge.py --check --locale vi                 # 文案生成检查
 python3 app/tool/guide_sync.py --check                             # 用户指南同步检查
 tooling/build-apk.sh --build-name <x.y.z>                          # 构建 APK
 ```
@@ -47,7 +47,7 @@ CI（`.github/workflows/ci.yml`）在 PR 上跑通用检查和改动涉及的部
 ### 源码、生成物与运行时补丁
 
 - 不手改生成物：`app/build/`、`.dart_tool/`、生成的 l10n 产物等；改输入后运行对应生成器。
-- 界面文案改 `app/lib/l10n/parts/*.arb`，中英文同步，再跑 `python3 app/tool/l10n_merge.py`；不要手改生成结果。
+- 界面文案改 `app/lib/l10n/parts/*.arb`，中英文同步，再跑 `python3 app/tool/l10n_merge.py --locale vi`；不要手改生成结果。
 - 用户指南改 `docs/guide/`，再跑 `python3 app/tool/guide_sync.py`。
 - 引擎补丁在 `runtime/patches/`：补丁文件与 `pins.json` 保持同步，不手改正被补丁覆盖的产物。
 - 插件教学技能改 `sdk/plugin-kit/skill/` 或 SDK 对应输入，再跑 `node sdk/plugin-kit/scripts/sync-skill.mjs`。

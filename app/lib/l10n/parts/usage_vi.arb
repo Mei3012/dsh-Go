@@ -1,0 +1,9 @@
+{
+  "usageStatsTitle": "Gửi thống kê sử dụng ẩn danh",
+  "usageStatsSection": "Cải thiện DSH Go",
+  "usageStatsFooter": "Chỉ gồm số lần dùng, phiên bản và hãng điện thoại. Không bao giờ gồm hội thoại, tệp hay tài khoản.",
+  "usageNoticeBody": "Không có hội thoại hay thông tin cá nhân.\nTắt bất cứ lúc nào.",
+  "usageUpgradeNotice": "Mới: thống kê sử dụng ẩn danh, giúp cải thiện DSH Go.\nKhông có hội thoại hay thông tin cá nhân.",
+  "usageUpgradeLearn": "Tìm hiểu thêm",
+  "usageUpgradeOff": "Tắt"
+}

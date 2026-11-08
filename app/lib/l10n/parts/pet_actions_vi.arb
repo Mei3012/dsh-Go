@@ -1,0 +1,11 @@
+{
+  "petActionSending": "Đang gửi…",
+  "petActionTargetChanged": "Máy chủ đã thay đổi. Hãy mở lại Hỏi nhanh; nội dung đã nhập vẫn được giữ.",
+  "petActionSendFailed": "Không gửi được. Nội dung đã nhập vẫn được giữ; hãy thử lại.",
+  "petActionBusy": "Hội thoại này đang bận. Hãy chọn Hội thoại mới.",
+  "petActionVoiceMissing": "Hãy tải mô hình giọng nói ngoại tuyến trong ứng dụng trước.",
+  "petActionVoiceTitle": "Giọng nói cho Hỏi nhanh",
+  "petActionVoiceReturn": "Quay lại thú cưng",
+  "petActionVoiceStop": "Kết thúc ghi âm",
+  "petActionVoiceStart": "Ghi âm"
+}

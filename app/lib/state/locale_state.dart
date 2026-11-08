@@ -8,13 +8,15 @@ import '../l10n/l10n.dart';
 enum AppLanguage {
   system,
   zh,
-  en;
+  en,
+  vi;
 
   /// The fixed locale, or null to follow the system languages.
   Locale? get locale => switch (this) {
     AppLanguage.system => null,
     AppLanguage.zh => AppLocale.zhCN,
     AppLanguage.en => AppLocale.en,
+    AppLanguage.vi => AppLocale.vi,
   };
 
   static AppLanguage parse(String? v) =>

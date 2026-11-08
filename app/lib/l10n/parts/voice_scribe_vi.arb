@@ -1,0 +1,18 @@
+{
+  "voiceScribeReadFailed": "Không đọc được cài đặt giọng nói. Hãy thử lại.",
+  "voiceScribeSavedReadFailed": "Đã lưu. Làm mới để xem cài đặt mới nhất.",
+  "voiceScribeSaveUnconfirmed": "Không xác nhận được việc lưu. Hãy làm mới hoặc thử lại.",
+  "voiceScribeTitle": "Cài đặt giọng nói",
+  "voiceScribePolishPrompt": "Prompt tinh chỉnh",
+  "voiceScribeLanguage": "Ngôn ngữ nhận dạng",
+  "voiceScribeRefresh": "Làm mới",
+  "voiceScribeHostChanged": "Kết nối đã thay đổi. Mở lại để tiếp tục.",
+  "voiceScribeUnsupported": "Cài đặt giọng nói không khả dụng trên kết nối này.",
+  "voiceScribePluginDefault": "Mặc định",
+  "voiceScribeBuiltInPrompt": "Prompt tích hợp",
+  "voiceScribeProviders": "Dịch vụ nhận dạng",
+  "voiceScribeKeySet": "Đã đặt khoá",
+  "voiceScribeNoKey": "Chưa có khoá",
+  "voiceScribeHotwords": "Từ khoá ưu tiên",
+  "voiceScribeHotwordRules": "{count, plural, =1{1 quy tắc} other{{count} quy tắc}}"
+}

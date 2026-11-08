@@ -9369,6 +9369,9 @@ class L10nEn extends L10n {
   String get localeEn => 'English';
 
   @override
+  String get localeVi => 'Tiếng Việt';
+
+  @override
   String get localEnvChooseTitle => 'Where should DSH run?';
 
   @override
@@ -16590,7 +16593,7 @@ class L10nEn extends L10n {
   String get searchKwUiMode => 'native,web,web mode,interface';
 
   @override
-  String get searchKwLanguage => 'chinese,english,locale';
+  String get searchKwLanguage => 'chinese,english,locale,vietnamese';
 
   @override
   String get searchKwAutoCommands => 'don\'t ask,auto approve,full access,no confirmation';

@@ -1,0 +1,7 @@
+{
+  "mediaImageLoading": "Đang tải ảnh",
+  "mediaImageReload": "Tải lại ảnh",
+  "mediaImageReloadHint": "Chỉ đọc lại tệp; không tạo lại và không tính phí tạo",
+  "mediaVideoNoPoster": "Chạm để phát video",
+  "mediaSavedFilesCount": "Đã lưu {count} tệp vào thư viện ảnh"
+}

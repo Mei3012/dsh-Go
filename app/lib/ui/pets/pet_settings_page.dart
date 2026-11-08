@@ -32,7 +32,7 @@ class PetEntryTile extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final id = ref.watch(petPrefsProvider.select((p) => p.packId));
     final packName = id == noPetId ? null : ref.watch(petPackProvider(id)).value?.name;
-    final name = AppLocale.isEnglish ? petNames[id] ?? packName ?? id : packName ?? petNames[id] ?? id;
+    final name = AppLocale.isLatin ? petNames[id] ?? packName ?? id : packName ?? petNames[id] ?? id;
     return SettingsTile(
       icon: AppIcons.pet,
       tint: tint,

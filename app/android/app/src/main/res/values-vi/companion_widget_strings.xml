@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tiện ích màn hình chính của Phòng Đồng hành (companion/CompanionWidget.kt). Nội dung cô ấy
+     đang làm và đang nói do ứng dụng gửi theo ngôn ngữ của ứng dụng; các chuỗi này dùng khi
+     chưa có nội dung đó và cho danh sách chọn tiện ích. -->
+<resources>
+    <string name="companion_widget_label">Phòng Đồng hành</string>
+    <string name="companion_widget_description">Cô ấy ở trên màn hình chính của bạn. Chạm để ghé thăm.</string>
+    <string name="companion_widget_name">Cô cá voi</string>
+    <string name="companion_widget_waiting">Đang đợi bạn trong phòng</string>
+    <string name="companion_widget_asleep">Đang ngủ</string>
+</resources>

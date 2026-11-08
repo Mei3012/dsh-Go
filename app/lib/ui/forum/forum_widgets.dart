@@ -32,7 +32,7 @@ String forumAgo(DateTime? at, {DateTime? now}) {
 /// `1.2万` for big counts, plain digits below ten thousand.
 String forumCount(int n) {
   if (n < 10000) return '$n';
-  if (appL10n.localeName == 'en') return NumberFormat.compact(locale: 'en').format(n);
+  if (AppLocale.isLatin) return NumberFormat.compact(locale: 'en').format(n);
   final wan = n / 10000;
   final value = (wan >= 100 ? wan.round() : (wan * 10).round() / 10).toString().replaceFirst(RegExp(r'\.0$'), '');
   return appL10n.remoteForumTenThousands(value);

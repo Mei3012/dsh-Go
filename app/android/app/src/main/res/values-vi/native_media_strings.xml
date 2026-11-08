@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Khả năng của plugin (nativemedia/): chỉ báo đang nghe và phím đóng phụ đề. -->
+<resources>
+    <string name="native_media_listening">%1$s đang nghe</string>
+    <string name="native_media_stop">Dừng</string>
+    <string name="native_media_close_caption">Đóng phụ đề</string>
+</resources>

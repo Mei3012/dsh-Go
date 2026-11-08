@@ -1,0 +1,22 @@
+{
+  "mediaConfigKeySaved": "Đã lưu · Chưa xác minh",
+  "mediaConfigKeyUnknown": "Không có trạng thái",
+  "mediaConfigKeyNote": "Máy chủ báo cho biết có khoá hay không. Lưu khoá không xác minh xác thực hay quyền dùng model.",
+  "mediaConfigConsumers": "Các dịch vụ media dùng khoá này: {services}. Sửa hoặc gỡ bỏ khoá sẽ ảnh hưởng đến tất cả; các tích hợp khác trên máy chủ cũng có thể dùng khoá này.",
+  "mediaConfigCheck": "Kiểm tra cấu hình đã lưu",
+  "mediaConfigCheckNote": "Chỉ là bản chụp cục bộ; không gửi yêu cầu đến nhà cung cấp và không tốn phí tạo nội dung. Không xác minh khoá, kết nối, số dư, quyền dùng model hay khu vực. Máy chủ vẫn là nơi quyết định cấu hình nào được chấp nhận.",
+  "mediaConfigCheckReady": "Không thấy vấn đề nào trong cấu hình cục bộ",
+  "mediaConfigCheckMissingKey": "Máy chủ chưa báo có khoá nào được lưu.",
+  "mediaConfigCheckModels": "Chưa chọn model nào, hoặc một số model đã chọn bị thiếu hay dùng giao thức khác.",
+  "mediaConfigCheckDisabled": "Dịch vụ này đang tắt.",
+  "mediaConfigUrlInvalid": "Hãy nhập địa chỉ gốc API HTTPS có tên máy chủ, không kèm thông tin xác thực, truy vấn, fragment hay khoảng trắng.",
+  "mediaConfigUrlEndpoint": "Đây có vẻ là điểm cuối của yêu cầu. Hãy nhập địa chỉ gốc API; máy chủ sẽ tự nối thêm đường dẫn yêu cầu.",
+  "mediaConfigUrlRoot": "Giao thức này chỉ cần địa chỉ gốc (https://host), không kèm đường dẫn API.",
+  "mediaConfigUrlHint": "Nhập địa chỉ gốc API, không phải điểm cuối tạo nội dung. Dịch vụ tương thích OpenAI giữ nguyên tiền tố (ví dụ /v1).",
+  "mediaConfigPreview": "Xem trước yêu cầu tạo",
+  "mediaConfigPreviewNote": "Chỉ cho yêu cầu tạo nội dung; yêu cầu sửa và kiểm tra trạng thái có thể dùng đường dẫn khác. Xem trước không chứng minh được kết nối hay việc máy chủ chấp nhận.",
+  "mediaConfigPreviewUnavailable": "Danh mục của máy chủ này không có đường dẫn yêu cầu.",
+  "mediaConfigTargetTitle": "Dùng lại khoá cho một đích khác?",
+  "mediaConfigTargetBody": "Đích sẽ đổi từ {before} thành {after}. Các yêu cầu sau có thể gửi khoá được tham chiếu đến đích mới. Chỉ tiếp tục nếu bạn tin cậy đích đó. Máy chủ vẫn kiểm tra thay đổi này.",
+  "mediaConfigTargetConfirm": "Tin cậy đích và tiếp tục"
+}

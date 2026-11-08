@@ -284,7 +284,7 @@ class _Option extends ConsumerWidget {
     final dark = theme.brightness == Brightness.dark;
     final duration = AppMotion.of(context, AppMotion.quick);
     final pack = id == noPetId ? null : ref.watch(petPackProvider(id)).value;
-    final name = AppLocale.isEnglish ? petNames[id] ?? pack?.name ?? id : pack?.name ?? petNames[id] ?? id;
+    final name = AppLocale.isLatin ? petNames[id] ?? pack?.name ?? id : pack?.name ?? petNames[id] ?? id;
     return Semantics(
       selected: selected,
       inMutuallyExclusiveGroup: true,

@@ -1,0 +1,7 @@
+{
+  "mediaVideoLoading": "Đang tải video…",
+  "mediaVideoCannotPlay": "Không phát được video này ở đây. Hãy thử lại hoặc mở bằng ứng dụng khác.",
+  "mediaVideoPlay": "Phát",
+  "mediaVideoPause": "Tạm dừng",
+  "mediaVideoSaveFailed": "Không lưu được video. Hãy thử lại."
+}

@@ -8876,6 +8876,9 @@ class L10nZh extends L10n {
   String get localeEn => 'English';
 
   @override
+  String get localeVi => 'Tiếng Việt';
+
+  @override
   String get localEnvChooseTitle => 'DSH 在哪里运行？';
 
   @override
@@ -15762,7 +15765,7 @@ class L10nZh extends L10n {
   String get searchKwUiMode => '原生,网页,网页模式,界面,切换界面';
 
   @override
-  String get searchKwLanguage => '中文,英文,简体,English';
+  String get searchKwLanguage => '中文,英文,简体,English,越南语';
 
   @override
   String get searchKwAutoCommands => '别问我,不要确认,自动允许,完全权限,免确认';

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="phone_prompt_approval_title">DSH Go · Phê duyệt</string>
+    <string name="phone_prompt_review_title">DSH Go · Cần bạn xem</string>
+    <string name="phone_prompt_native_title">DSH Go · Điều khiển điện thoại</string>
+    <string name="phone_prompt_handoff_title">DSH Go · Đến lượt bạn</string>
+    <string name="phone_prompt_allow_once">Cho phép một lần</string>
+    <string name="phone_prompt_allow_app">Cho phép ứng dụng này trong tác vụ này</string>
+    <string name="phone_prompt_allow_task">Cho phép trong tác vụ này</string>
+    <string name="phone_prompt_reject">Từ chối</string>
+    <string name="phone_prompt_open">Xem trong ứng dụng</string>
+    <string name="phone_prompt_later">Để sau</string>
+    <string name="phone_prompt_stop">Dừng tác vụ</string>
+    <string name="phone_prompt_continue">Tiếp tục</string>
+    <string name="phone_prompt_remaining">Còn %1$d giây · không phản hồi sẽ không cho phép thao tác</string>
+    <string name="phone_prompt_result_channel">Kết quả điều khiển điện thoại</string>
+    <string name="phone_prompt_result_title">DSH Go · Hoàn tất tác vụ</string>
+    <string name="phone_prompt_result_text">Xem kết quả</string>
+</resources>

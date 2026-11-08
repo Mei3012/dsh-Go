@@ -35,7 +35,7 @@ class _DshAppState extends ConsumerState<DshApp> with WidgetsBindingObserver {
   /// Themes of the palette last built: rebuilt only when the palette or the
   /// language changes.
   AppAccent? _accent;
-  bool? _english;
+  bool? _latin;
   bool? _glassBlur;
   bool? _instantPages;
   bool? _fluid;
@@ -87,23 +87,23 @@ class _DshAppState extends ConsumerState<DshApp> with WidgetsBindingObserver {
   @override
   void didChangeAccessibilityFeatures() => setState(() {});
 
-  void _themesFor(AppAccent accent, bool english, bool glassBlur, bool instantPages, bool fluid) {
+  void _themesFor(AppAccent accent, bool latin, bool glassBlur, bool instantPages, bool fluid) {
     if (accent == _accent &&
-        english == _english &&
+        latin == _latin &&
         glassBlur == _glassBlur &&
         instantPages == _instantPages &&
         fluid == _fluid) {
       return;
     }
     _accent = accent;
-    _english = english;
+    _latin = latin;
     _glassBlur = glassBlur;
     _instantPages = instantPages;
     _fluid = fluid;
     // Plugin views that ask for `accent: "app"` follow the palette.
     DshUiAppAccent.set(accent.seed.toARGB32());
-    // English UI still shows Chinese content: keep its glyphs Chinese.
-    final glyphs = english ? AppLocale.zhCN : null;
+    // A Latin-script UI still shows Chinese content: keep its glyphs Chinese.
+    final glyphs = latin ? AppLocale.zhCN : null;
     _light = buildLightTheme(
       accent: accent,
       glyphLocale: glyphs,
@@ -160,7 +160,7 @@ class _DshAppState extends ConsumerState<DshApp> with WidgetsBindingObserver {
         performance.reduceMotion || WidgetsBinding.instance.platformDispatcher.accessibilityFeatures.disableAnimations;
     final fluid = performance.fluidMotion && !reduced;
     FrameClock.instance.enabled = fluid;
-    _themesFor(ref.watch(accentProvider), locale.languageCode == 'en', performance.blur, reduced, fluid);
+    _themesFor(ref.watch(accentProvider), locale.languageCode != 'zh', performance.blur, reduced, fluid);
     if (!waiting && !_settled) {
       WidgetsBinding.instance.addPostFrameCallback((_) => _settled = true);
     }

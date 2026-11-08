@@ -1,0 +1,13 @@
+{
+  "setupAppearanceTitle": "Chọn giao diện",
+  "setupAppearanceMessage": "Có thể đổi bất cứ lúc nào trong Cài đặt",
+  "setupLightMode": "Chế độ nhẹ",
+  "setupCapsulePreparing": "Đang chuẩn bị runtime",
+  "setupCapsuleProgress": "Runtime {percent}%",
+  "setupCapsuleProgressSemantics": "Đang chuẩn bị runtime, xong {percent}%",
+  "setupCapsuleReady": "Runtime đã sẵn sàng",
+  "setupCapsuleFailed": "Cài đặt thất bại",
+  "setupWaitingBody": "Sẽ tự tiếp tục khi sẵn sàng",
+  "setupNotifyWhenDone": "Sẽ thông báo khi xong",
+  "setupAwaitSignIn": "Đăng nhập DeepSeek sẽ mở khi sẵn sàng"
+}

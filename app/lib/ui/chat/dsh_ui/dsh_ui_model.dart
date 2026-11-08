@@ -1306,7 +1306,7 @@ String formatDshUiCompact(double value) {
   if (!value.isFinite) return '—';
   final abs = value.abs();
   if (abs >= 1e16) return value.toStringAsExponential(0);
-  if (AppLocale.isEnglish) {
+  if (AppLocale.isLatin) {
     if (abs >= 1e9) {
       return appL10n.viewUiHundredMillion(formatDshUiNumber(value / 1e9));
     }

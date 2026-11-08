@@ -1,0 +1,6 @@
+{
+  "phoneStartupFailureStopping": "Khởi động thất bại; đang dừng",
+  "phoneStartupFailureStoppingDetail": "Khởi động thất bại; đang dừng. {reason}",
+  "phoneStartupTokenTimeout": "Khởi động quá thời gian chờ: không nhận được token khởi động trong 180 giây. Hãy xem nhật ký.",
+  "phoneStartupPortNotReady": "Đã nhận token khởi động nhưng cổng dịch vụ cục bộ chưa sẵn sàng. Hãy xem nhật ký."
+}

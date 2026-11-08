@@ -196,7 +196,7 @@ class MediaSettingsHome extends ConsumerWidget {
       final keySet = settings.credentials[service.keyRef]?.configured == true;
       final summary = mediaServiceModelsSummary(service, catalog);
       return EngineFieldRow(
-        title: mediaServiceTitle(service, presets, english: AppLocale.isEnglish),
+        title: mediaServiceTitle(service, presets, english: AppLocale.isLatin),
         subtitle: keySet ? summary : '$summary · ${l10n.mediaSettingsKeyMissing}',
         trailing: Switch(
           value: service.enabled,
@@ -228,7 +228,7 @@ class MediaSettingsHome extends ConsumerWidget {
               showChoiceSheet(
                 context,
                 title: l10n.mediaSettingsAddService,
-                options: [for (final (preset, _) in addable) (preset, preset.title(AppLocale.isEnglish))],
+                options: [for (final (preset, _) in addable) (preset, preset.title(AppLocale.isLatin))],
                 selected: null,
                 onSelect: (value) {
                   if (value is! MediaPreset) return;

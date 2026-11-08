@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Lối tắt trên màn hình chính và ô Thiết lập nhanh (shortcuts/, tile/). Để ở tệp riêng
+     để chỉnh sửa chuỗi của các mô-đun khác không đụng vào đây. -->
+<resources>
+    <string name="shortcut_new_chat">Hội thoại mới</string>
+    <string name="shortcut_voice_input">Nhập bằng giọng nói</string>
+    <string name="tile_new_chat">Hội thoại mới</string>
+</resources>

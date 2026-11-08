@@ -35,7 +35,7 @@
   "searchKwPermission": "permissions,approval,don't ask,read only,full access,auto-run commands",
   "searchKwAgentPresets": "presets,mode,agent mode",
   "searchKwUiMode": "native,web,web mode,interface",
-  "searchKwLanguage": "chinese,english,locale",
+  "searchKwLanguage": "chinese,english,locale,vietnamese",
   "searchKwAutoCommands": "don't ask,auto approve,full access,no confirmation",
   "searchKwPhoneFiles": "storage,files,downloads,photos",
   "searchKwVisualReplies": "charts,cards,visual,options",

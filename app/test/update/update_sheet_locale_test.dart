@@ -73,6 +73,14 @@ void main() {
       expect(releaseNotesFor(_release(notes: ''), 'zh'), '');
     });
 
+    test('every Latin-script language reads the English notes', () {
+      final release = _release();
+      // Only Chinese and English notes are written; Vietnamese is Latin-script,
+      // so it takes the English section rather than falling back to Chinese.
+      expect(releaseNotesFor(release, 'vi'), '- Plugins can show up natively');
+      expect(releaseNotesFor(_release(byLocale: {'zh': '- 内测', 'en': '- Beta'}), 'vi'), '- Beta');
+    });
+
     test('the cached offer keeps the split', () {
       final release = _release(byLocale: {'zh': '- 内测', 'en': '- Beta'});
       final again = parseUpdateManifest(release.toManifestJson());

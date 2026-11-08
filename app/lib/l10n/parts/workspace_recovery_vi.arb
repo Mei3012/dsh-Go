@@ -1,0 +1,16 @@
+{
+  "workspaceRecoveryTitle": "Khôi phục chỉ mục không gian làm việc",
+  "workspaceRecoveryEnable": "Dùng chỉ mục không gian làm việc khôi phục",
+  "workspaceRecoveryDisable": "Dùng lại chỉ mục gốc",
+  "workspaceRecoveryHint": "Chỉ trên điện thoại này: dùng một chỉ mục riêng để mở những hội thoại còn đọc được khi chỉ mục không gian làm việc gốc gặp lỗi.",
+  "workspaceRecoveryActive": "Đang chọn chỉ mục khôi phục riêng. Cả chỉ mục gốc và chỉ mục khôi phục đều được giữ lại.",
+  "workspaceRecoveryWorking": "Đang xử lý…",
+  "workspaceRecoveryEnableBody": "Engine cục bộ sẽ dừng, chuyển sang chỉ mục khôi phục riêng rồi khởi động lại. Chỉ mục không gian làm việc gốc giữ nguyên, không đổi. Tệp hội thoại, plugin và thông tin đăng nhập không bị xoá.\n\nLần dùng đầu tiên, chỉ mục mới được dựng từ những hội thoại còn đọc được và có thư mục vẫn tồn tại. Tên không gian làm việc cũ, thứ tự, mặc định, trạng thái lưu trữ và ghim không được kế thừa tự động. Không gian làm việc rỗng và hội thoại có thư mục đã mất có thể không xuất hiện. Nhóm cục bộ và tuỳ chọn ghim ban đầu vẫn được giữ.\n\nChỉ mục khôi phục được giữ lại và dùng tiếp ở lần bật sau. Việc này đi vòng qua lỗi của chỉ mục gốc; nó không sửa chỉ mục gốc.",
+  "workspaceRecoveryDisableBody": "Engine cục bộ sẽ dừng, chuyển lại về chỉ mục không gian làm việc gốc rồi khởi động lại. Lỗi ban đầu có thể xuất hiện lại.\n\nTệp hội thoại tạo ra trong lúc khôi phục và chỉ mục khôi phục đều được giữ lại. Thành viên và thứ tự không gian làm việc không đồng bộ giữa hai chỉ mục. Một số hội thoại tạo ra trong lúc khôi phục có thể không xuất hiện với chỉ mục gốc. Hãy bật lại chỉ mục khôi phục để tiếp tục dùng nó.",
+  "workspaceRecoveryEnableStart": "Bật và khởi động lại",
+  "workspaceRecoveryDisableStart": "Dùng chỉ mục gốc và khởi động lại",
+  "workspaceRecoveryUnavailable": "Phiên bản này không hỗ trợ khôi phục chỉ mục không gian làm việc. Hãy kiểm tra trạng thái engine cục bộ và cập nhật ứng dụng.",
+  "workspaceRecoveryRestartIncomplete": "Chế độ chỉ mục đã đổi, nhưng chưa xác nhận được engine đã dừng hay đã khởi động lại. Hãy đợi engine dừng rồi khởi động lại.",
+  "workspaceRecoverySaveFailed": "Không lưu được chế độ chỉ mục. Không có yêu cầu khởi động mới. Hãy kiểm tra trạng thái engine cục bộ và nhật ký.",
+  "workspaceRecoveryFailed": "Thao tác chưa hoàn tất. Hãy kiểm tra trạng thái engine cục bộ và nhật ký. Trang này cho biết chế độ chỉ mục đã đổi hay chưa."
+}

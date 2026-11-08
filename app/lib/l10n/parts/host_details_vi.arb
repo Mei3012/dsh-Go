@@ -1,0 +1,4 @@
+{
+  "hostDetailsConnectionType": "Kiểu kết nối",
+  "hostDetailsSshNetworkHint": "Dùng đường hầm SSH. Kết nối này không có chẩn đoán tuyến LAN / P2P hay đo độ trễ."
+}

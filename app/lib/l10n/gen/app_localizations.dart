@@ -6,6 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
 import 'app_localizations_en.dart';
+import 'app_localizations_vi.dart';
 import 'app_localizations_zh.dart';
 
 // ignore_for_file: type=lint
@@ -90,7 +91,7 @@ abstract class L10n {
   ];
 
   /// A list of this localizations delegate's supported locales.
-  static const List<Locale> supportedLocales = <Locale>[Locale('en'), Locale('zh')];
+  static const List<Locale> supportedLocales = <Locale>[Locale('en'), Locale('vi'), Locale('zh')];
 
   /// No description provided for @a11yRestoreTitle.
   ///
@@ -16388,6 +16389,12 @@ abstract class L10n {
   /// **'English'**
   String get localeEn;
 
+  /// No description provided for @localeVi.
+  ///
+  /// In zh, this message translates to:
+  /// **'Tiếng Việt'**
+  String get localeVi;
+
   /// No description provided for @localEnvChooseTitle.
   ///
   /// In zh, this message translates to:
@@ -28799,7 +28806,7 @@ abstract class L10n {
   /// No description provided for @searchKwLanguage.
   ///
   /// In zh, this message translates to:
-  /// **'中文,英文,简体,English'**
+  /// **'中文,英文,简体,English,越南语'**
   String get searchKwLanguage;
 
   /// No description provided for @searchKwAutoCommands.
@@ -37374,7 +37381,7 @@ class _L10nDelegate extends LocalizationsDelegate<L10n> {
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['en', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['en', 'vi', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_L10nDelegate old) => false;
@@ -37385,6 +37392,8 @@ L10n lookupL10n(Locale locale) {
   switch (locale.languageCode) {
     case 'en':
       return L10nEn();
+    case 'vi':
+      return L10nVi();
     case 'zh':
       return L10nZh();
   }

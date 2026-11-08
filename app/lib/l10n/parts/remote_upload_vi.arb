@@ -1,0 +1,9 @@
+{
+  "stateWorkspaceFilesHint": "Tệp đã tải lên không gian làm việc hiện tại:",
+  "stateRemoteUploadNameInvalid": "Máy chủ từ chối tên tệp. Hãy rút ngắn hoặc bỏ các ký tự đặc biệt rồi thử lại.",
+  "stateRemoteUploadWorkspaceUnavailable": "Hội thoại này không có thư mục làm việc ghi được",
+  "stateRemoteUploadWorkspaceChanged": "Thư mục làm việc đã thay đổi. Hãy kiểm tra lại trước khi tải lên lần nữa.",
+  "stateRemoteUploadLimit": "Máy chủ đã từ chối tải lên. Hãy kiểm tra kích thước tệp hoặc thử lại sau.",
+  "stateRemoteUploadUnsupported": "Máy chủ này không hỗ trợ tải tệp lên. Hãy cập nhật plugin Remote trên máy chủ rồi kết nối lại.",
+  "stateRemoteUploadTooLarge": "Tệp vượt quá giới hạn kích thước của giao thức tải lên từ xa"
+}

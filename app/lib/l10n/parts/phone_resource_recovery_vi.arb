@@ -1,0 +1,7 @@
+{
+  "phoneResourceRecoveryTitle": "Tài nguyên nền cần xác minh",
+  "phoneResourceRecoveryRunning": "Đang kiểm tra bản ghi tài nguyên gốc. Tác vụ điện thoại mới sẽ chờ tới khi việc này xong.",
+  "phoneResourceRecoveryStorage": "Không đọc hay lưu được bản ghi tài nguyên. Có thể thử lại việc lưu hoặc đọc. Việc giải phóng đã xác nhận sẽ không chạy lại, và các thao tác cũ không bị phát lại.",
+  "phoneResourceRecoveryPending": "Tài nguyên nền cũ chưa được xác minh. Tác vụ điện thoại mới đang bị chặn. Hãy chọn lại kênh ban đầu đã được cấp quyền và thử lại; nếu vẫn không xác minh được, hãy khởi động lại thiết bị và kiểm tra lại. Các thao tác cũ có thể đã xảy ra. Việc đọc thông báo tác vụ bị gián đoạn không xoá các tài nguyên này.",
+  "phoneResourceRecoveryRetry": "Thử lại xác minh tài nguyên"
+}

@@ -1,0 +1,8 @@
+{
+  "phoneGateCleanupTitle": "Chưa xác nhận dọn dẹp sau lần dò",
+  "phoneGateCleanupUnknown": "Tài nguyên nền mới bị chặn. Nếu kênh gốc vẫn còn khả dụng thì chỉ thử lại lần dọn dẹp gốc; thao tác này không chạy lại lần dò.",
+  "phoneGateCleanupRunning": "Đang chờ lần dò gốc và việc dọn dẹp của nó. Kênh vẫn được ghim cho tới khi xác nhận đã dọn dẹp xong.",
+  "phoneGateCleanupRetry": "Chỉ thử lại dọn dẹp",
+  "phoneGateCleanupDone": "Đã xác nhận dọn dẹp. Hãy chọn lại kênh một cách rõ ràng để chạy lần kiểm tra mới.",
+  "phoneGateRetest": "Kiểm tra lại kênh này"
+}

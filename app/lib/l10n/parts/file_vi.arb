@@ -1,5 +1,10 @@
 {
   "fileImageName": "ảnh",
   "fileSharedText": "Văn bản đã chia sẻ.txt",
-  "fileChatFallback": "trò chuyện"
+  "fileChatFallback": "trò chuyện",
+  "fileUploadToHost": "Gửi tệp lên máy tính",
+  "fileUploadToHostHint": "Vào không gian làm việc của hội thoại này trên máy tính, tệp gốc không nén",
+  "fileUploadProgress": "Đang gửi {done}/{total}: {name}",
+  "fileUploadDone": "Đã gửi lên máy tính: {names}",
+  "fileUploadFailed": "Không thể gửi lên máy tính"
 }

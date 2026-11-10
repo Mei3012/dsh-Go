@@ -1,0 +1,7 @@
+{
+  "phoneRuntimeUpgradeBase": "Không xác nhận được engine mới tương thích với môi trường Linux của bạn nên quá trình cập nhật đã dừng. Môi trường và các công cụ đã cài không bị xoá. Hãy sao lưu đầy đủ rồi liên hệ người bảo trì để chuyển đổi; đừng đặt lại hay gỡ cài đặt ứng dụng.",
+  "phoneRuntimeUpgradeManifest": "Không thể nhận diện an toàn manifest cập nhật runtime. Quá trình cập nhật đã dừng và môi trường của bạn được giữ nguyên. Hãy kiểm tra tệp APK và liên hệ người bảo trì; đừng đặt lại môi trường.",
+  "phoneRuntimeUpgradeInterrupted": "Quá trình nâng cấp runtime chưa hoàn tất. Dữ liệu và trạng thái khôi phục của bạn đã được giữ lại. Hãy thử lại cài đặt. Nếu vẫn lỗi, hãy xuất gói chẩn đoán và liên hệ người bảo trì; đừng đặt lại hay xoá các thư mục khôi phục.",
+  "phoneRuntimeUpgradeSymlink": "Một đường dẫn hệ thống đã bị thay bằng liên kết tuỳ chỉnh nên không thể cập nhật môi trường một cách an toàn. Môi trường của bạn được giữ nguyên. Hãy sao lưu và liên hệ người bảo trì.",
+  "phoneRuntimeUpgradeRunning": "Chưa xác nhận engine hoặc tiến trình còn sót lại đã dừng. Quá trình cập nhật chưa bắt đầu. Hãy dừng engine cục bộ và chờ dọn dẹp xong rồi thử lại; đừng đặt lại môi trường."
+}

@@ -1623,6 +1623,217 @@ class L10nVi extends L10n {
   String get activityToolListSeparator => ', ';
 
   @override
+  String get androidShellTitle => 'Android Shell';
+
+  @override
+  String get androidShellEntryHint => 'Kênh lệnh hệ thống riêng, mặc định tắt';
+
+  @override
+  String get androidShellSubtitle =>
+      'Chạy lệnh hệ thống Android trên chính điện thoại này qua Shizuku hoặc ADB tự kết nối, không phải bash trong Ubuntu.';
+
+  @override
+  String get androidShellEnable => 'Cho phép Android Shell';
+
+  @override
+  String get androidShellEnableHint =>
+      'Công tắc riêng, độc lập với chế độ không làm phiền và cài đặt xác nhận màn hình.';
+
+  @override
+  String get androidShellConfirmationNote =>
+      'Mỗi lệnh đều cần xác nhận native trên điện thoại. Các trường hợp miễn xác nhận của điều khiển màn hình không áp dụng ở đây. Quyền của Shell khác với điều khiển màn hình; quy tắc ứng dụng không chặn được mọi lệnh.';
+
+  @override
+  String get androidShellMasterOff =>
+      'Hãy bật Điều khiển điện thoại ở trang trước rồi mới bật Android Shell. Bạn vẫn xem được hướng dẫn cấp quyền và ghép nối tại đây.';
+
+  @override
+  String get androidShellRiskTitle => 'Cho phép chạy lệnh hệ thống Android?';
+
+  @override
+  String get androidShellRiskBody =>
+      'Lệnh dùng UID thực tế của kênh đã chọn và có thể thay đổi ứng dụng, cài đặt hệ thống cùng tệp dùng chung. Quy tắc ứng dụng của điều khiển màn hình không bảo vệ đầy đủ khỏi những lệnh này. Mỗi lệnh vẫn cần xác nhận native riêng. Chỉ cho phép những lệnh bạn hiểu và tin tưởng.';
+
+  @override
+  String get androidShellRiskAction => 'Cho phép Android Shell';
+
+  @override
+  String get androidShellBackend => 'Kênh thực thi';
+
+  @override
+  String get androidShellShizukuHint =>
+      'Dùng Shizuku đã cài và đang chạy, có cấp quyền rõ ràng. Không cần Android 14, trợ năng hay chế độ không làm phiền.';
+
+  @override
+  String get androidShellAdb => 'ADB tự kết nối';
+
+  @override
+  String get androidShellAdbHint =>
+      'Kết nối tới gỡ lỗi không dây của chính điện thoại này bằng danh tính ADB riêng của ứng dụng. Không kết nối tới thiết bị khác.';
+
+  @override
+  String get androidShellInstalled => 'Đã cài Shizuku';
+
+  @override
+  String get androidShellRunning => 'Shizuku đang chạy';
+
+  @override
+  String get androidShellGranted => 'Shizuku đã được cấp quyền';
+
+  @override
+  String get androidShellPaired => 'ADB đã ghép nối';
+
+  @override
+  String get androidShellConnected => 'ADB đã kết nối';
+
+  @override
+  String get androidShellAuthorize => 'Yêu cầu cấp quyền Shizuku';
+
+  @override
+  String get androidShellAuthorizeHint =>
+      'Hãy cài và khởi động Shizuku, rồi nhấn nút này để cấp quyền cho dsh-Go. Mở hoặc làm mới trang này không bao giờ yêu cầu quyền.';
+
+  @override
+  String get androidShellStatus => 'Trạng thái thực thi';
+
+  @override
+  String get androidShellUid => 'UID thực tế';
+
+  @override
+  String get androidShellUidUnknown => 'Chưa được báo cáo';
+
+  @override
+  String get androidShellRefresh => 'Làm mới trạng thái';
+
+  @override
+  String get androidShellStop => 'Dừng Android Shell';
+
+  @override
+  String get androidShellStopHint =>
+      'Huỷ các lệnh hiện tại và dừng thực thi Shell riêng mà không tắt điều khiển màn hình.';
+
+  @override
+  String get androidShellPairingGuide =>
+      'Trong tuỳ chọn nhà phát triển, bật “Gỡ lỗi không dây” và chọn “Ghép nối thiết bị bằng mã ghép nối”. Mã chỉ dùng cho lần ghép nối này, không được lưu và không ghi vào nhật ký.';
+
+  @override
+  String get androidShellStartPairing => 'Mở hướng dẫn ghép nối';
+
+  @override
+  String get androidShellPair => 'Nhập mã ghép nối';
+
+  @override
+  String get androidShellPairSubmit => 'Ghép nối';
+
+  @override
+  String get androidShellPairCode => 'Mã ghép nối 6 chữ số';
+
+  @override
+  String get androidShellPairPort => 'Cổng ghép nối (không bắt buộc)';
+
+  @override
+  String get androidShellPairPortHint =>
+      'Dùng cổng trong hộp thoại ghép nối, không phải cổng kết nối trên trang chính của Gỡ lỗi không dây. Để trống để tự động dò tìm.';
+
+  @override
+  String get androidShellConnect => 'Kết nối ADB';
+
+  @override
+  String get androidShellConnectChannel => 'Kết nối kênh đã chọn';
+
+  @override
+  String get androidShellConnectPort => 'Cổng kết nối (không bắt buộc)';
+
+  @override
+  String get androidShellConnectPortHint =>
+      'Dùng cổng trong mục “Địa chỉ IP và cổng” trên trang chính của Gỡ lỗi không dây, không phải cổng ghép nối. Chỉ kết nối tới điện thoại này. Để trống để tự động dò tìm.';
+
+  @override
+  String androidShellErrorCode(String code) {
+    return 'Mã lỗi: $code';
+  }
+
+  @override
+  String androidShellLimits(int seconds, int bytes) {
+    return 'Mỗi lệnh tối đa $seconds giây và $bytes byte đầu ra';
+  }
+
+  @override
+  String get androidShellErrorDisabled => 'Android Shell đang tắt.';
+
+  @override
+  String get androidShellErrorNotConnected => 'Kênh đã chọn chưa được kết nối.';
+
+  @override
+  String get androidShellErrorShizukuMissing => 'Hãy cài Shizuku trước.';
+
+  @override
+  String get androidShellErrorShizukuStopped => 'Hãy khởi động Shizuku rồi làm mới trạng thái.';
+
+  @override
+  String get androidShellErrorPermissionRequired => 'Cần cấp quyền rõ ràng trong Shizuku.';
+
+  @override
+  String get androidShellErrorAdbNotPaired => 'Hãy ghép nối điện thoại này với gỡ lỗi không dây rồi kết nối ADB.';
+
+  @override
+  String get androidShellErrorConnectFailed =>
+      'Kết nối thất bại. Hãy kiểm tra kênh đã chọn và cổng kết nối gỡ lỗi không dây hiện tại, rồi thử lại.';
+
+  @override
+  String get androidShellErrorIdentityChanged =>
+      'Danh tính kênh đã thay đổi. Hãy dừng lại rồi cấp quyền hoặc kết nối lại.';
+
+  @override
+  String get androidShellErrorBusy => 'Một thao tác khác vẫn đang chờ. Hãy thử lại sau hoặc dừng Android Shell trước.';
+
+  @override
+  String get androidShellErrorInvalidArguments =>
+      'Đầu vào không hợp lệ. Hãy dùng mã ghép nối 6 chữ số và cổng từ 1 đến 65535.';
+
+  @override
+  String get androidShellErrorCancelled => 'Thao tác đã bị huỷ.';
+
+  @override
+  String get androidShellErrorTimeout =>
+      'Thao tác đã hết thời gian chờ. Hãy xác minh kết quả trước; không bao giờ tự động thử lại một lệnh đã gửi đi.';
+
+  @override
+  String get androidShellErrorConfirmationDenied => 'Lệnh chưa được phê duyệt.';
+
+  @override
+  String get androidShellErrorCleanupFailed => 'Chưa dọn dẹp xong khi dừng. Hãy thử dừng lại trước khi chạy lệnh mới.';
+
+  @override
+  String get androidShellErrorLocked => 'Điện thoại đang khoá. Hãy mở khoá rồi thử lại.';
+
+  @override
+  String get androidShellErrorConfirmationUnavailable =>
+      'Không thể hiển thị xác nhận native. Hãy quay lại ứng dụng và kiểm tra quyền thông báo.';
+
+  @override
+  String get androidShellErrorTransportLost =>
+      'Kênh đã mất kết nối. Hãy xác minh kết quả trước; không bao giờ tự động thử lại một lệnh đã gửi đi. Kết nối lại nếu cần.';
+
+  @override
+  String get androidShellErrorProtocolMismatch =>
+      'Module native không hỗ trợ giao thức Shell này. Hãy cập nhật ứng dụng.';
+
+  @override
+  String get androidShellErrorNativeUnavailable => 'Module native Android Shell không khả dụng trong bản dựng này.';
+
+  @override
+  String get androidShellErrorInvalidResponse =>
+      'Không nhận được trạng thái native hợp lệ. Hãy làm mới hoặc cập nhật ứng dụng.';
+
+  @override
+  String get androidShellErrorStopFailed => 'Chưa xác nhận được việc dừng. Hãy làm mới trạng thái và thử dừng lại.';
+
+  @override
+  String get androidShellErrorUnknown =>
+      'Không xác nhận được kết quả. Hãy xác minh trước; không bao giờ tự động thử lại một lệnh đã gửi đi.';
+
+  @override
   String get botsFolderGone => 'Thư mục này không còn tồn tại';
 
   @override
@@ -2723,6 +2934,111 @@ class L10nVi extends L10n {
 
   @override
   String get botsPetSource => 'Từ DSH-TUI';
+
+  @override
+  String get botsPetImport => 'Nhập';
+
+  @override
+  String get botsPetImportHint =>
+      'Tự mang linh vật pixel của riêng bạn: một zip chứa pack.json và các tệp PNG khung hình; định dạng nằm trong docs/design/pets.md ở kho mã nguồn. Nhấn giữ linh vật đã nhập để xoá.';
+
+  @override
+  String botsPetImportDone(String name) {
+    return '$name đã tới';
+  }
+
+  @override
+  String botsPetCodexTitle(String name) {
+    return '$name được chuyển đổi từ linh vật Codex';
+  }
+
+  @override
+  String get botsPetCodexBody => 'Phần lớn được giữ nguyên như cũ. Có vài điểm khác biệt:';
+
+  @override
+  String get botsPetCodexOk => 'Đã hiểu';
+
+  @override
+  String get botsPetCodexLoops =>
+      'Chuyển động lặp liên tục cho đến khi trạng thái đổi, thay vì chạy vài vòng rồi trở về trạng thái chờ như trong Codex';
+
+  @override
+  String get botsPetCodexRoamLeft => 'Đi sang trái dùng ảnh lật của hàng đi sang phải';
+
+  @override
+  String get botsPetCodexDrag => 'Khi kéo luôn dùng hàng hướng sang phải';
+
+  @override
+  String get botsPetCodexSleep => 'Khi ngủ sẽ hiện khung đầu tiên của trạng thái chờ';
+
+  @override
+  String get botsPetCodexLook => 'Các ô nhìn theo từng hướng không được dùng';
+
+  @override
+  String get botsPetCodexWebp => 'Ảnh WebP đã được chuyển sang PNG';
+
+  @override
+  String get botsPetCodexCustomTracks => 'Các hàng chuyển động tuỳ chỉnh không gắn với trạng thái nào';
+
+  @override
+  String get botsPetCodexFps => 'Tốc độ khung hình được làm tròn thành số mili giây nguyên';
+
+  @override
+  String get botsPetCodexOneShot => 'Chuyển động chỉ phát một lần sẽ quay về đâu là do DSH quyết định';
+
+  @override
+  String get botsPetCodexMissingAuthor => 'Gói không ghi tác giả';
+
+  @override
+  String get botsPetCodexMissingLicense => 'Gói không ghi giấy phép';
+
+  @override
+  String get botsPetCodexMissingSource => 'Gói không ghi nguồn';
+
+  @override
+  String botsPetImportReplaced(String name) {
+    return '$name đã được cập nhật';
+  }
+
+  @override
+  String get botsPetImportNotZip => 'Đây không phải tệp zip';
+
+  @override
+  String get botsPetImportNoPack => 'Không có pack.json trong zip';
+
+  @override
+  String botsPetImportBadPack(String detail) {
+    return 'pack.json có vấn đề: $detail';
+  }
+
+  @override
+  String botsPetImportMissingSheet(String name) {
+    return 'Zip thiếu ảnh khung hình $name';
+  }
+
+  @override
+  String botsPetImportBadSheet(String name) {
+    return 'Ảnh khung hình không hợp lệ: $name (phải là PNG đầy đủ, mỗi cạnh tối đa 4096 pixel, mọi khung đều nằm trong ảnh)';
+  }
+
+  @override
+  String get botsPetImportTooLarge => 'Gói linh vật này quá lớn';
+
+  @override
+  String get botsPetImportStorage => 'Không thể lưu trên điện thoại. Hãy thử lại';
+
+  @override
+  String botsPetRemoveTitle(String name) {
+    return 'Xoá $name?';
+  }
+
+  @override
+  String get botsPetRemoveBody => 'Sau này vẫn có thể nhập lại.';
+
+  @override
+  String botsPetRemoveFailed(String name) {
+    return 'Không thể xoá $name. Hãy thử lại';
+  }
 
   @override
   String get botsPetSize => 'Kích thước';
@@ -4789,7 +5105,23 @@ class L10nVi extends L10n {
   String get companionSendFailed => 'Câu đó không gửi được. Nói lại lần nữa nhé?';
 
   @override
-  String get companionNeedsAttention => 'Có việc cần bạn xác nhận. Chạm để xem';
+  String get companionLogTitle => 'Lịch sử trò chuyện';
+
+  @override
+  String get companionContextUnsupported =>
+      'Máy chủ này chưa nhận được ngữ cảnh của cô ấy: tên, tính cách và chuyện vừa xảy ra sẽ không tới được cô ấy, chỉ lời bạn nói. Hãy cập nhật máy chủ hoặc chuyển sang chế độ nhẹ.';
+
+  @override
+  String get companionLogEmpty => 'Chưa nói gì cả.';
+
+  @override
+  String get companionLogYou => 'Bạn';
+
+  @override
+  String get companionLogOpenChat => 'Mở trong hội thoại';
+
+  @override
+  String get companionLogOlder => 'Tải tin nhắn trước đó';
 
   @override
   String get companionMenuHistory => 'Xem lịch sử trò chuyện';
@@ -5043,7 +5375,7 @@ class L10nVi extends L10n {
   String get companionSnack2 => 'Vị rong biển. Cảm ơn bạn.';
 
   @override
-  String get companionSnack3 => 'Ừm… mình ăn thêm một miếng nữa được không?';
+  String get companionSnack3 => 'Ừm... mình ăn thêm một miếng nữa được không?';
 
   @override
   String get companionPlay1 => 'Này, bắt được rồi!';
@@ -5096,7 +5428,7 @@ class L10nVi extends L10n {
 
   @override
   String get companionMenuRestartLightConfirm =>
-      'Cô ấy sẽ quên cuộc trò chuyện này và cuộc trò chuyện trên điện thoại này sẽ bị xoá.';
+      'Cô ấy sẽ quên cuộc trò chuyện này và phần trò chuyện trên điện thoại này sẽ bị xoá.';
 
   @override
   String get companionInviteRest => 'Nghỉ trên đệm với mình một lát nhé?';
@@ -5114,10 +5446,35 @@ class L10nVi extends L10n {
   String get companionInviteYes2 => 'Mình nằm sẵn rồi, bạn cũng thư giãn nhé.';
 
   @override
-  String get companionMenuInvite => 'Lời mời';
+  String get companionMenuPace => 'Mức cô ấy tự lên tiếng';
 
   @override
-  String get companionMenuInviteHint => 'Khi bạn ngồi yên bên cô ấy, thỉnh thoảng cô ấy sẽ rủ bạn nghỉ cùng';
+  String get companionPaceHint =>
+      'Cô ấy chỉ lên tiếng khi bạn ngồi yên bên cô ấy: rủ bạn nghỉ cùng, hoặc nhắc tới một cuộc trò chuyện khác. Không bao giờ nói lúc đêm muộn, và mỗi lần ghé chỉ rủ tối đa một lần.';
+
+  @override
+  String get companionPaceQuiet => 'Im lặng';
+
+  @override
+  String get companionPaceQuietHint => 'Không bao giờ tự nói; bạn nói thì cô ấy mới nói';
+
+  @override
+  String get companionPaceRare => 'Thỉnh thoảng';
+
+  @override
+  String get companionPaceRareHint => 'Tối đa 2 lần một ngày, cách nhau ít nhất 6 giờ';
+
+  @override
+  String get companionPaceOften => 'Thường xuyên';
+
+  @override
+  String get companionPaceOftenHint => 'Tối đa 6 lần một ngày, cách nhau ít nhất 2 giờ';
+
+  @override
+  String get companionPaceChatty => 'Nói nhiều';
+
+  @override
+  String get companionPaceChattyHint => 'Tối đa 12 lần một ngày, cách nhau ít nhất nửa giờ';
 
   @override
   String get companionSetupBundled => 'Đưa cô ấy về nhà';
@@ -5134,7 +5491,7 @@ class L10nVi extends L10n {
       'Tài nguyên nhân vật đã giải nén trên điện thoại này sẽ bị xoá. Lịch sử trò chuyện không bị ảnh hưởng. Bạn có thể đưa cô ấy về bất cứ lúc nào.';
 
   @override
-  String get companionHug1 => 'Ừm… một cái ôm.';
+  String get companionHug1 => 'Ừm... một cái ôm.';
 
   @override
   String get companionHug2 => 'Được ôm thế này mình thấy an tâm lắm.';
@@ -5158,7 +5515,7 @@ class L10nVi extends L10n {
   String get companionBond3 => 'Rất thân';
 
   @override
-  String get companionCloser1 => 'Hình như… mình không còn hồi hộp như trước nữa.';
+  String get companionCloser1 => 'Hình như... mình không còn hồi hộp như trước nữa.';
 
   @override
   String get companionCloser2 => 'Ở bên bạn, mình thấy thoải mái hơn nhiều.';
@@ -5173,39 +5530,84 @@ class L10nVi extends L10n {
   String get companionHugClose => 'Bạn ôm chặt hơn cũng được mà.';
 
   @override
-  String companionTaskDone(String title) {
-    return '“$title” bên đó đã chạy xong.';
-  }
-
-  @override
   String get companionTaskDoneUntitled => 'Tác vụ bên đó của bạn đã xong.';
-
-  @override
-  String companionTaskFailed(String title) {
-    return '“$title” hình như gặp lỗi. Bạn xem thử nhé?';
-  }
 
   @override
   String get companionTaskFailedUntitled => 'Tác vụ bên đó của bạn hình như gặp lỗi. Bạn xem thử nhé?';
 
   @override
-  String companionTaskApproval(String title) {
-    return '“$title” đang chờ bạn phê duyệt.';
-  }
-
-  @override
-  String get companionTaskApprovalUntitled => 'Bên đó có việc đang chờ bạn phê duyệt.';
-
-  @override
-  String companionTaskQuestion(String title) {
-    return '“$title” có điều muốn hỏi bạn.';
-  }
-
-  @override
-  String get companionTaskQuestionUntitled => 'Bên đó có câu hỏi đang chờ bạn trả lời.';
-
-  @override
   String get companionTaskOpen => 'Xem thử';
+
+  @override
+  String get companionMenuSignals => 'Những gì cô ấy nhắc tới';
+
+  @override
+  String get companionSignalsHint =>
+      'Những điều này chỉ nói với bạn, ngay trong phòng của cô ấy; không gửi gì cho model. Tần suất theo mục “Mức cô ấy tự lên tiếng”, dùng chung với lời mời, và không bao giờ nói lúc đêm muộn. Ở mức “Im lặng” cô ấy không nói gì.';
+
+  @override
+  String get companionSignalState => 'Để ý các cuộc trò chuyện khác';
+
+  @override
+  String get companionSignalStateHint => 'Cô ấy để ý khi một cuộc trò chuyện khác trên máy chủ này xong hoặc gặp lỗi';
+
+  @override
+  String get companionSignalSpeech => 'Nhắc tới';
+
+  @override
+  String get companionSignalSpeechHint => 'Cô ấy nói một câu ngắn khi bạn đang yên lặng';
+
+  @override
+  String get companionSignalVoice => 'Nói thành tiếng';
+
+  @override
+  String get companionSignalVoiceHint => 'Đọc câu đó thành tiếng khi giọng của cô ấy đang bật';
+
+  @override
+  String get companionSignalNight => 'Nhắc nghỉ ngơi lúc đêm muộn';
+
+  @override
+  String get companionSignalNightHint =>
+      'Ở trong phòng cô ấy một lúc vào đêm muộn, cô ấy sẽ nhẹ nhàng nhắc bạn một lần';
+
+  @override
+  String get companionSignalLateUse => 'Muộn thế này rồi mà bạn vẫn ở đây với mình... nghỉ một chút nhé?';
+
+  @override
+  String get companionRecallTitle => 'Tự nhớ lại trong chế độ đầy đủ';
+
+  @override
+  String get companionRecallHint => 'Bật lên sẽ bắt đầu một cuộc trò chuyện mới; thay đổi những gì cô ấy nhớ sẽ tự tắt';
+
+  @override
+  String get companionRecallConfirm =>
+      'Khi bật, những ký ức cô ấy đã xác nhận (tối đa 12) sẽ được gửi cho model cùng mỗi câu trả lời của cô ấy trong chế độ đầy đủ. Một cuộc trò chuyện mới sẽ bắt đầu; cuộc trò chuyện hiện tại vẫn ở trong danh sách hội thoại chính. Thay đổi ký ức sẽ tự tắt mục này, và bạn có thể bật lại.';
+
+  @override
+  String get companionRecallTurnOn => 'Bật';
+
+  @override
+  String get companionRecallOn => 'Từ cuộc trò chuyện mới này, mình sẽ nhớ những gì bạn dặn.';
+
+  @override
+  String get companionRecallBusy => 'Một cuộc trò chuyện khác đang dùng tự nhớ lại. Hãy tắt ở đó trước.';
+
+  @override
+  String get companionRecallUnsupported => 'Máy chủ này hiện chưa bật được tự nhớ lại';
+
+  @override
+  String get companionRecallFailed => 'Chưa bật được tự nhớ lại. Hãy thử lại.';
+
+  @override
+  String get companionRecallOff =>
+      'Tự nhớ lại đang tắt. Tin nhắn tiếp theo của bạn sẽ bắt đầu một cuộc trò chuyện mới.';
+
+  @override
+  String get companionRecallOffFailed => 'Chưa tắt được tự nhớ lại. Hãy thử lại.';
+
+  @override
+  String get companionRecallStopped =>
+      'Tự nhớ lại đã dừng (những gì cô ấy nhớ có thay đổi) nên đã bắt đầu một cuộc trò chuyện mới. Bạn có thể bật lại trong menu.';
 
   @override
   String get companionMenuVoice => 'Giọng của cô ấy';
@@ -5336,7 +5738,7 @@ class L10nVi extends L10n {
 
   @override
   String companionRenamed(String name) {
-    return '“$name”… được, từ giờ đó là tên của mình.';
+    return '“$name”... được, từ giờ đó là tên của mình.';
   }
 
   @override
@@ -5370,13 +5772,13 @@ class L10nVi extends L10n {
   String get companionVoiceMale => 'nam';
 
   @override
-  String get companionClonePreset => 'Giọng có sẵn';
+  String get companionClonePreset => 'Giọng mẫu';
 
   @override
   String get companionCloneMine => 'Nhân bản giọng nói';
 
   @override
-  String get companionVoicePresetVoice => 'Giọng có sẵn';
+  String get companionVoicePresetVoice => 'Giọng mẫu';
 
   @override
   String get companionCloneRecording => 'Bản ghi';
@@ -5447,6 +5849,94 @@ class L10nVi extends L10n {
   @override
   String get companionPersonaFooter =>
       'Chế độ nhẹ sẽ áp dụng từ câu trả lời tiếp theo; chế độ đầy đủ sẽ cho cô ấy biết trong tin nhắn tiếp theo của bạn.';
+
+  @override
+  String get companionMenuMoves => 'Động tác và biểu cảm';
+
+  @override
+  String get companionMovesHint =>
+      'Những mục này đi kèm model. Mục đang bật sẽ được đưa cho AI (tối đa 24 biểu cảm và 24 động tác, theo thứ tự trong danh sách) và cô ấy tự dùng khi trả lời; chạm vào tên để đổi thành tên dễ hiểu hơn, chạm ▶ để thử trên người cô ấy.';
+
+  @override
+  String get companionMovesNone => 'Model này không có biểu cảm hay động tác riêng; cô ấy dùng những cái có sẵn.';
+
+  @override
+  String get companionMovesRename => 'Đổi tên';
+
+  @override
+  String get companionMovesTry => 'Thử xem';
+
+  @override
+  String get companionPackLegacyModel =>
+      'Đây là model Cubism 2 cũ (.moc và model.json); runtime trên điện thoại chỉ đọc .moc3 từ Cubism 3 trở lên. Hãy mở bằng Cubism Editor, xuất thành moc3 rồi nhập tệp đó.';
+
+  @override
+  String companionFailedMocVersion(String version, String latest) {
+    return 'Model này được xuất bằng Cubism mới hơn (phiên bản moc $version); runtime trên điện thoại chỉ đọc tới $latest. Hãy xuất sang phiên bản cũ hơn trong Cubism Editor rồi nhập tệp đó.';
+  }
+
+  @override
+  String get companionMenuAdapt => 'Khớp với model này';
+
+  @override
+  String get companionAdaptHint =>
+      'Model của bạn (key của bạn, tính phí theo lượt) sẽ đọc nhân vật này và khớp phần đầu, mắt, biểu cảm và chỗ có thể chạm. Nội dung gửi đi: tên model, danh sách tham số, tên các biểu cảm, động tác và bộ phận, những gì bạn viết bên dưới và bảng khớp hiện tại. Không bao giờ gửi tệp model hay texture.';
+
+  @override
+  String get companionAdaptOffer =>
+      'Model này cần khớp: model của bạn sẽ đọc danh sách tham số và tên các biểu cảm, động tác của nó (không bao giờ đọc tệp model), dùng key của bạn một lần. Các model mới sau này sẽ tự khớp; bạn có thể tắt việc đó trong menu.';
+
+  @override
+  String get companionAdaptOfferYes => 'Khớp';
+
+  @override
+  String get companionAdaptOfferNo => 'Để sau';
+
+  @override
+  String get companionAdaptNote => 'Chỗ nào chưa đúng? (không bắt buộc)';
+
+  @override
+  String get companionAdaptNoteHint => 'Ví dụ: xoa đầu không có phản ứng, lúc vui thì mặt lại tối';
+
+  @override
+  String get companionAdaptRun => 'Để AI khớp';
+
+  @override
+  String get companionAdaptUndo => 'Hoàn tác việc khớp';
+
+  @override
+  String get companionAdaptAuto => 'Tự khớp model mới khi nhập vào';
+
+  @override
+  String get companionAdaptStart => 'Để mình làm quen với thân hình mới này…';
+
+  @override
+  String get companionAdaptDone => 'Rồi, mình đã quen với thân hình này.';
+
+  @override
+  String companionAdaptDoneNote(String note) {
+    return 'Rồi, mình đã quen với thân hình này. $note';
+  }
+
+  @override
+  String get companionAdaptUndone => 'Được, quay lại như cũ nhé.';
+
+  @override
+  String get companionAdaptNoKey => 'Để dùng model của bạn khớp cho mình, trước hết hãy thêm API key trong Cài đặt.';
+
+  @override
+  String companionAdaptFailed(String reason) {
+    return 'Lần này chưa được ($reason). Bạn có thể thử lại ở “Khớp với model này” trong menu.';
+  }
+
+  @override
+  String get companionAdaptUnreadable => 'câu trả lời của model không hiểu được';
+
+  @override
+  String get companionAdaptEmpty => 'model không tìm thấy chỗ nào để khớp';
+
+  @override
+  String get companionAdaptNetwork => 'không có kết nối';
 
   @override
   String get systemImeTitle => 'Chẩn đoán bộ gõ hệ thống';
@@ -8048,6 +8538,25 @@ class L10nVi extends L10n {
 
   @override
   String get fileChatFallback => 'trò chuyện';
+
+  @override
+  String get fileUploadToHost => 'Gửi tệp lên máy tính';
+
+  @override
+  String get fileUploadToHostHint => 'Vào không gian làm việc của hội thoại này trên máy tính, tệp gốc không nén';
+
+  @override
+  String fileUploadProgress(int done, int total, String name) {
+    return 'Đang gửi $done/$total: $name';
+  }
+
+  @override
+  String fileUploadDone(String names) {
+    return 'Đã gửi lên máy tính: $names';
+  }
+
+  @override
+  String get fileUploadFailed => 'Không thể gửi lên máy tính';
 
   @override
   String get hostDetailsConnectionType => 'Kiểu kết nối';
@@ -11273,6 +11782,389 @@ class L10nVi extends L10n {
       'Trên trang chính của cài đặt Gỡ lỗi không dây, tìm “Địa chỉ IP và cổng” và nhập cổng sau dấu hai chấm. Đừng dùng cổng trong hộp thoại mã ghép nối.';
 
   @override
+  String get phonePreviewTitle => 'Xem trước trực tiếp màn hình nền';
+
+  @override
+  String get phonePreviewDescription =>
+      'Chỉ đọc khung hình khi bản xem trước đang hiển thị, và khung hình chỉ ở lại trên thiết bị này. Bản xem trước chỉ để xem.';
+
+  @override
+  String get phonePreviewOpen => 'Xem màn hình nền';
+
+  @override
+  String phonePreviewTask(String taskId) {
+    return 'Xem trước tác vụ $taskId';
+  }
+
+  @override
+  String get phonePreviewInUse => 'Đang xem trước một tác vụ khác';
+
+  @override
+  String get phonePreviewOff => 'Tác vụ đã kết thúc hoặc bản xem trước đang tắt';
+
+  @override
+  String get phonePreviewUnavailable => 'Không xem trước được hoặc màn hình đang được bảo vệ';
+
+  @override
+  String get phonePreviewWaiting => 'Đang chờ khung hình mới của màn hình nền';
+
+  @override
+  String get phoneViewportTitle => 'Khung nhìn màn hình nền';
+
+  @override
+  String get phoneViewportDescription =>
+      'Có hiệu lực khi màn hình nền tiếp theo được tạo. Màn hình hiện tại không đổi; tạo lại sau khi trả lại sẽ dùng thiết lập mới. Thao tác này không buộc ứng dụng xoay.';
+
+  @override
+  String get phoneViewportPortrait => 'Dọc';
+
+  @override
+  String get phoneViewportLandscape => 'Ngang';
+
+  @override
+  String get phoneResumeTask => 'Cho phép điều khiển điện thoại trở lại';
+
+  @override
+  String get phoneResumeTaskHint =>
+      'Cho phép các thao tác điện thoại tiếp theo trong hội thoại này. Các thao tác đã xong sẽ không được phát lại.';
+
+  @override
+  String get phoneResumeTaskFailed => 'Chưa tiếp tục được. Thao tác trước có thể vẫn đang hoàn tất.';
+
+  @override
+  String phoneStoppedTask(int task) {
+    return 'Đã dừng tác vụ điện thoại $task';
+  }
+
+  @override
+  String get phoneTaskDrainingHint => 'Đang chờ thao tác trước và việc dọn dẹp màn hình nền hoàn tất.';
+
+  @override
+  String get phoneTaskCleanupFailedHint =>
+      'Chưa xác nhận được việc dọn dẹp màn hình nền. Điều khiển điện thoại vẫn bị chặn.';
+
+  @override
+  String phoneFinishingTask(int task) {
+    return 'Tác vụ điện thoại $task đang hoàn tất';
+  }
+
+  @override
+  String get phoneCleanupRetry => 'Thử lại dọn dẹp';
+
+  @override
+  String get phoneCleanupRetryFailed =>
+      'Vẫn chưa xác nhận được màn hình nền trước. Việc dùng màn hình đó vẫn bị giữ chỗ.';
+
+  @override
+  String get phoneSelfCheckTitle => 'Tự kiểm tra điện thoại cục bộ';
+
+  @override
+  String get phoneSelfCheckPartial => 'Kiểm tra một phần — chỉ những mục đã quan sát mới có kết quả';
+
+  @override
+  String get phoneSelfCheckScope =>
+      'Dùng kênh đã chọn và đã kết nối cùng một màn hình trình chiếu tạm thời. Không kiểm tra việc mở ứng dụng, nhập văn bản, ảnh chụp màn hình, OCR và ảnh hưởng lên MAIN. Dọn dẹp xong không chứng minh là đã tạo được màn hình.';
+
+  @override
+  String get phoneSelfCheckStart => 'Bắt đầu kiểm tra một phần';
+
+  @override
+  String get phoneSelfCheckCancel => 'Yêu cầu huỷ';
+
+  @override
+  String get phoneSelfCheckRetry => 'Chỉ thử lại dọn dẹp';
+
+  @override
+  String get phoneSelfCheckRefresh => 'Làm mới trạng thái';
+
+  @override
+  String get phoneSelfCheckSave => 'Lưu báo cáo đã ẩn thông tin mật';
+
+  @override
+  String get phoneSelfCheckSaving => 'Đang lưu…';
+
+  @override
+  String get phoneSelfCheckSaved => 'Đã lưu báo cáo vào Downloads/DSH-Go.';
+
+  @override
+  String get phoneSelfCheckSaveFailed => 'Không lưu được báo cáo.';
+
+  @override
+  String get phoneSelfCheckReportHint =>
+      'Chỉ lưu khi bạn chọn. Báo cáo cục bộ chỉ gồm kết quả cố định, không có ảnh chụp màn hình, văn bản nhận dạng, nhật ký, dữ liệu tài khoản hay mã nhận diện lần chạy.';
+
+  @override
+  String phoneSelfCheckRunState(String state) {
+    String _temp0 = intl.Intl.selectLogic(state, {
+      'idle': 'Chưa bắt đầu',
+      'running': 'Đang kiểm tra một phần',
+      'cleaning': 'Đang dọn dẹp; huỷ không hoàn tác phần nhập đã gửi',
+      'done': 'Đã kết thúc thực thi và dọn dẹp; hãy xem từng kết quả bên dưới',
+      'cancelled': 'Đã huỷ; các thao tác đã quan sát vẫn được ghi lại',
+      'cleanup_pending': 'Chưa xác nhận dọn dẹp — tài nguyên vẫn bị giữ',
+      'other': 'Không có trạng thái',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String phoneSelfCheckStepState(String state) {
+    String _temp0 = intl.Intl.selectLogic(state, {
+      'not_run': 'Chưa chạy / không quan sát',
+      'running': 'Đang chạy',
+      'pass': 'Quan sát thấy đạt',
+      'fail': 'Thất bại',
+      'skipped': 'Đã bỏ qua',
+      'unknown': 'Chưa xác nhận',
+      'cancelled': 'Đã huỷ',
+      'other': 'Chưa xác nhận',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String phoneSelfCheckStage(String stage) {
+    String _temp0 = intl.Intl.selectLogic(stage, {
+      'device': 'Điều kiện cần của thiết bị',
+      'channel': 'Kênh đã chọn',
+      'display': 'Màn hình nền tạm thời',
+      'input_probe': 'Bộ nhận chạm',
+      'launch': 'Mở ứng dụng',
+      'tree': 'Cây trợ năng',
+      'tap': 'Chạm nút trong ứng dụng',
+      'scroll': 'Cuộn trong ứng dụng',
+      'back': 'Quay lại trong ứng dụng',
+      'text_ascii': 'Nhập ASCII cố định',
+      'text_zh': 'Nhập tiếng Trung cố định',
+      'capture': 'Chụp khung mẫu cục bộ',
+      'continuity': 'Làm mới có kiểm soát, giới hạn',
+      'main': 'Quan sát MAIN giới hạn',
+      'ocr': 'OCR cục bộ',
+      'cleanup': 'Dọn dẹp nghiêm ngặt',
+      'other': 'Mục không rõ',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String phoneSelfCheckReason(String reason) {
+    String _temp0 = intl.Intl.selectLogic(reason, {
+      'busy': 'Điện thoại hoặc kênh đang bận.',
+      'unsupported': 'Thiết bị hoặc đầu bên kia không hỗ trợ lần kiểm tra này.',
+      'cancelled': 'Yêu cầu này đã bị huỷ hoặc hết hiệu lực.',
+      'disabled': 'Điều khiển điện thoại đang tắt.',
+      'locked': 'Thiết bị đang khoá.',
+      'identity': 'Lần chạy hoặc kênh gốc không còn khớp.',
+      'invalid': 'Không xác minh được yêu cầu hoặc kết quả.',
+      'display': 'Không xác minh được màn hình tạm thời.',
+      'input': 'Chưa xác nhận việc nhận hoặc gửi phần nhập. Phần nhập đã gửi sẽ không được thử lại.',
+      'cleanup': 'Chưa xác nhận dọn dẹp tài nguyên. Chỉ thử lại dọn dẹp.',
+      'denied': 'Hệ thống đã từ chối thao tác.',
+      'timeout': 'Thao tác hết thời gian chờ; phần việc đã gửi vẫn có thể hoàn tất.',
+      'unavailable': 'Không có trạng thái cục bộ hoặc kênh đã chọn.',
+      'target_unavailable': 'Không xác minh được mục tiêu cố định. Hãy hoàn tất dọn dẹp trước khi bắt đầu lại.',
+      'target_changed': 'Mục tiêu gốc đã thay đổi. Chỉ tiếp tục với việc dọn dẹp.',
+      'target_cleanup': 'Chưa xác nhận dọn dẹp mục tiêu. Chỉ thử lại dọn dẹp.',
+      'target_main': 'Đã quan sát thấy mục tiêu trên MAIN. Các bước tiếp theo đã dừng; hãy hoàn tất dọn dẹp.',
+      'target_readback': 'Số lượng hoặc văn bản đọc lại của mục tiêu cố định không khớp. Không lặp lại thao tác; hãy hoàn tất dọn dẹp.',
+      'tree_cleanup': 'Chưa xác nhận dọn dẹp kết nối cây. Chỉ thử lại dọn dẹp.',
+      'target_launch': 'Việc mở mục tiêu bị từ chối hoặc chưa xác nhận. Hãy kiểm tra thiết bị và hoàn tất dọn dẹp.',
+      'frame_unavailable':
+          'Không quan sát được khung mẫu cục bộ nào dùng được. Hãy hoàn tất dọn dẹp trước lần kiểm tra mới.',
+      'frame_mismatch': 'Khung hình thực tế không khớp mục tiêu và giai đoạn này. Hãy hoàn tất dọn dẹp.',
+      'continuity': 'Chưa xác nhận chuỗi làm mới có kiểm soát, giới hạn. Đây không phải kết quả tốc độ khung hình.',
+      'main_changed': 'Các mẫu MAIN đã thay đổi; có thể gồm cả thao tác của bạn. Hãy hoàn tất dọn dẹp. Không kết luận được nguyên nhân.',
+      'main_unchanged': 'Không thấy thay đổi ở các điểm lấy mẫu hữu hạn này. Ảnh hưởng giữa các điểm đó vẫn chưa rõ.',
+      'main_incomplete': 'Các mẫu MAIN không đầy đủ. Không thể dùng để chứng minh là không bị ảnh hưởng.',
+      'not_installed': 'Lần tự kiểm tra này không gồm OCR. OCR chưa được kiểm tra.',
+      'other': 'Nhận được kết quả không nhận dạng được.',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String get phoneSelfCheckTargetScope =>
+      'Dùng một màn hình tạm thời thông thường và một mục tiêu cục bộ cố định để kiểm tra việc mở, đọc cây và một lần chạm nút. Không kiểm tra văn bản, cuộn, ảnh chụp màn hình và OCR. MAIN chỉ ghi lại lỗi đã quan sát được, không bao giờ kết luận đạt. Dọn dẹp xong không chứng minh là đã tạo được màn hình.';
+
+  @override
+  String get phoneSelfCheckProfileChoice => 'Chọn lần kiểm tra tiếp theo (không thay đổi báo cáo bên dưới)';
+
+  @override
+  String phoneSelfCheckProfile(String profile) {
+    String _temp0 = intl.Intl.selectLogic(profile, {
+      'probe_b': 'Kiểm tra bộ nhận phần nhập (B)',
+      'target_c1': 'Kiểm tra mục tiêu cố định (C1)',
+      'target_c2': 'Phần nhập và khung hình cố định (C2)',
+      'other': 'Kiểu kiểm tra không rõ',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String phoneSelfCheckReportProfile(String profile) {
+    String _temp0 = intl.Intl.selectLogic(profile, {
+      'probe_b': 'Báo cáo: bộ nhận phần nhập (B)',
+      'target_c1': 'Báo cáo: mục tiêu cố định (C1)',
+      'target_c2': 'Báo cáo: phần nhập và khung hình cố định (C2)',
+      'other': 'Báo cáo: chưa xác nhận',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String get phoneSelfCheckTargetC2Scope =>
+      'Dùng một mục tiêu cục bộ cố định để kiểm tra việc mở, đọc cây, một lần chạm nút, thay thế/đọc lại bằng ACTION_SET_TEXT với ASCII và tiếng Trung, chụp khung mẫu cục bộ và làm mới có kiểm soát, giới hạn. Thao tác này không đo FPS hay độ mượt. Các mẫu MAIN hữu hạn không thể chứng minh là không có ảnh hưởng giữa các mẫu. Không kiểm tra OCR, việc nhận chạm, cuộn và quay lại. Dọn dẹp xong không chứng minh là đã tạo được màn hình.';
+
+  @override
+  String phoneTaskWaiting(int taskId) {
+    return 'Tác vụ $taskId · Đang chờ tài nguyên';
+  }
+
+  @override
+  String phoneTaskWaitingApp(String packageName, int seconds) {
+    return 'Đang chờ ứng dụng $packageName · Đã trôi qua $seconds giây.';
+  }
+
+  @override
+  String phoneTaskWaitingUnknown(int seconds) {
+    return 'Đang chờ giao diện (chưa xác nhận danh tính ứng dụng) · Đã trôi qua $seconds giây.';
+  }
+
+  @override
+  String phoneTaskWaitingScreen(String screen, int seconds) {
+    return 'Đang chờ $screen · Đã trôi qua $seconds giây.';
+  }
+
+  @override
+  String get phoneTaskMainResource => 'màn hình chính';
+
+  @override
+  String get phoneTaskBackgroundResource => 'màn hình nền';
+
+  @override
+  String get phoneInterruptionTitle => 'Các tác vụ điện thoại trước chưa xác nhận hoàn tất';
+
+  @override
+  String get phoneInterruptionLoading => 'Đang đọc bản ghi tác vụ bị gián đoạn…';
+
+  @override
+  String get phoneInterruptionStorageError =>
+      'Không lưu hoặc đọc được bản ghi hoàn tất tác vụ. Hãy thử lại; điều này không có nghĩa là tài nguyên nền đã được giải phóng.';
+
+  @override
+  String phoneInterruptionHint(int count) {
+    return 'Đã có $count tác vụ bị gián đoạn hoặc không lưu được trạng thái hoàn tất. Các thao tác có thể đã xảy ra. Hãy kiểm tra trước. Việc xác nhận chỉ có nghĩa là bạn đã xem thông báo này; nó không tiếp tục thao tác và không chứng minh tài nguyên nền đã được giải phóng.';
+  }
+
+  @override
+  String get phoneInterruptionAcknowledge => 'Tôi đã kiểm tra thông báo gián đoạn';
+
+  @override
+  String get phoneInterruptionRetry => 'Thử lại việc lưu hoặc đọc';
+
+  @override
+  String get phoneInterruptionActionFailed => 'Bản ghi tác vụ chưa được xác nhận. Hãy thử lại.';
+
+  @override
+  String get phoneLocalOcrTitle => 'Nhận dạng văn bản trên thiết bị (ML Kit)';
+
+  @override
+  String get phoneLocalOcrUnknown => 'Không đọc được cài đặt này. Hãy làm mới rồi thử lại.';
+
+  @override
+  String get phoneLocalOcrDisclosure =>
+      'Việc nhận dạng chạy trên thiết bị này. Ảnh chụp màn hình và văn bản không được gửi cho Google; SDK của Google thu thập thống kê sử dụng như kiểu máy, phiên bản ứng dụng và thời gian xử lý.';
+
+  @override
+  String get phoneLocalOcrDetails =>
+      'Mặc định bật. Khi tắt, các yêu cầu nhận dạng văn bản không kích hoạt việc tải hay khởi tạo SDK. Ghép nối từ xa khởi tạo SDK dùng chung một cách riêng khi trình quét của nó mở ra; việc này không bật nhận dạng văn bản. Ảnh chụp màn hình và văn bản nhận dạng có thể được gửi tới model bạn đã cấu hình. Tắt mục này sẽ không bắt đầu nhận dạng cục bộ mới; phần việc đã bắt đầu vẫn có thể hoàn tất. Thao tác này không gỡ cài đặt SDK và không cam kết xoá hay ngừng gửi các thống kê SDK đã tích luỹ trước đó.';
+
+  @override
+  String get phoneBackgroundParallelTitle => 'Giới hạn tác vụ nền';
+
+  @override
+  String phoneBackgroundParallelStatus(int configured, int effective, int held) {
+    return 'Đã đặt: $configured · Giới hạn khả dụng: $effective · Đang dùng: $held';
+  }
+
+  @override
+  String get phoneBackgroundParallelDescription =>
+      'Hạ giới hạn sẽ giữ lại các tác vụ đang có. Tác vụ mới vẫn phải chờ ứng dụng và màn hình chính khả dụng.';
+
+  @override
+  String phoneBackgroundParallelChoice(int limit) {
+    return '$limit chỗ cho tác vụ nền';
+  }
+
+  @override
+  String get phoneBackgroundParallelOff => 'Kênh nền đang tắt. Lưu tuỳ chọn này không bật kênh lên.';
+
+  @override
+  String get phoneBackgroundParallelUnsupported => 'Thiết bị này hiện không dùng được thao tác nền.';
+
+  @override
+  String get phoneBackgroundParallelConnection => 'Cần có kết nối thì tác vụ nền mới mới có thể bắt đầu.';
+
+  @override
+  String get phoneBackgroundParallelBusy => 'Kênh nền đang được chuẩn bị hoặc bảo trì. Tác vụ mới chưa thể bắt đầu.';
+
+  @override
+  String get phoneBackgroundParallelRecovery =>
+      'Hãy xử lý việc khôi phục tài nguyên nền còn dang dở trước khi bắt đầu tác vụ mới.';
+
+  @override
+  String get phoneBackgroundParallelPeer => 'Dịch vụ đang kết nối không hỗ trợ các khả năng nền cần thiết.';
+
+  @override
+  String get phoneBackgroundParallelSerial =>
+      'Kết nối này chỉ hỗ trợ một chỗ cho tác vụ nền. Tuỳ chọn của bạn vẫn được lưu.';
+
+  @override
+  String get phoneSkillBundlePublishedUnverified =>
+      'Tệp đã được phát hành nhưng chưa xác minh đầy đủ thành công. Không lưu lại lần nữa.';
+
+  @override
+  String get phoneSkillBundleUnknown => 'Chưa xác nhận kết quả lưu. Tệp có thể đã được ghi. Không lưu lại lần nữa.';
+
+  @override
+  String phoneSkillBundleRevision(String revision) {
+    return 'Phiên bản tuyến: $revision';
+  }
+
+  @override
+  String get phoneSkillReplayReview => 'Xem lại tuyến điện thoại';
+
+  @override
+  String get phoneSkillReplaySourceChanged =>
+      'Phiên cục bộ hoặc kết nối đã thay đổi. Hãy chọn lại tuyến từ hội thoại cục bộ hiện tại.';
+
+  @override
+  String get phoneSkillReplayUnavailable =>
+      'Tuyến này chưa dùng được để chạy có kiểm soát trên điện thoại này. Vẫn có thể dùng mẫu skill thông thường.';
+
+  @override
+  String get phoneSkillReplayConfirm => 'Tôi đã xem lại tuyến này và ứng dụng được chọn cho lần dùng này.';
+
+  @override
+  String get phoneSkillReplayToComposer => 'Chèn vào hội thoại này';
+
+  @override
+  String phoneSkillReplayStartText(String request) {
+    return 'Một tuyến điện thoại đã được chọn và xem lại cục bộ. Chỉ gọi mcp__phone__replay với $request. Nếu không khả dụng hoặc bị từ chối, hãy trả lại cho người dùng/model; không phát lại thành các thao tác thông thường.';
+  }
+
+  @override
+  String get phoneSkillReplayQueue => 'Gửi tuyến (xếp hàng)';
+
+  @override
+  String get phoneSkillReplayQueued =>
+      'Tin nhắn tuyến đã được nhận hoặc xếp hàng. Điều này không có nghĩa là tuyến đã chạy thành công.';
+
+  @override
+  String get phoneSkillReplaySendUncertain =>
+      'Chưa xác nhận được việc gửi tin nhắn tuyến. Tin nhắn không được chuẩn bị hay phát lại lần nữa. Hãy kiểm tra hội thoại gốc.';
+
+  @override
   String get phoneTaskResultReady => 'Tác vụ xong · Xem kết quả';
 
   @override
@@ -11347,6 +12239,27 @@ class L10nVi extends L10n {
       'Trình quản lý root (Magisk, KernelSU hoặc APatch) sẽ hỏi bạn. Nếu cho phép, DSH Go sẽ chạy dịch vụ nền của riêng nó với quyền root. Chỉ khi bật “Giữ kênh root”, ứng dụng mới tự hỏi lại sau khi mất kết nối hoặc khởi động lại.';
 
   @override
+  String get phoneGateCleanupTitle => 'Chưa xác nhận dọn dẹp sau lần dò';
+
+  @override
+  String get phoneGateCleanupUnknown =>
+      'Tài nguyên nền mới bị chặn. Nếu kênh gốc vẫn còn khả dụng thì chỉ thử lại lần dọn dẹp gốc; thao tác này không chạy lại lần dò.';
+
+  @override
+  String get phoneGateCleanupRunning =>
+      'Đang chờ lần dò gốc và việc dọn dẹp của nó. Kênh vẫn được ghim cho tới khi xác nhận đã dọn dẹp xong.';
+
+  @override
+  String get phoneGateCleanupRetry => 'Chỉ thử lại dọn dẹp';
+
+  @override
+  String get phoneGateCleanupDone =>
+      'Đã xác nhận dọn dẹp. Hãy chọn lại kênh một cách rõ ràng để chạy lần kiểm tra mới.';
+
+  @override
+  String get phoneGateRetest => 'Kiểm tra lại kênh này';
+
+  @override
   String phoneKeepTitle(String mode) {
     String _temp0 = intl.Intl.selectLogic(mode, {
       'shizuku': 'Giữ kênh Shizuku',
@@ -11390,6 +12303,128 @@ class L10nVi extends L10n {
 
   @override
   String get phoneKeepFailed => 'Không kết nối lại được. Sẽ thử lại khi bạn mở ứng dụng hoặc bắt đầu tác vụ.';
+
+  @override
+  String get phoneResourceRecoveryTitle => 'Tài nguyên nền cần xác minh';
+
+  @override
+  String get phoneResourceRecoveryRunning =>
+      'Đang kiểm tra bản ghi tài nguyên gốc. Tác vụ điện thoại mới sẽ chờ tới khi việc này xong.';
+
+  @override
+  String get phoneResourceRecoveryStorage =>
+      'Không đọc hay lưu được bản ghi tài nguyên. Có thể thử lại việc lưu hoặc đọc. Việc giải phóng đã xác nhận sẽ không chạy lại, và các thao tác cũ không bị phát lại.';
+
+  @override
+  String get phoneResourceRecoveryPending =>
+      'Tài nguyên nền cũ chưa được xác minh. Tác vụ điện thoại mới đang bị chặn. Hãy chọn lại kênh ban đầu đã được cấp quyền và thử lại; nếu vẫn không xác minh được, hãy khởi động lại thiết bị và kiểm tra lại. Các thao tác cũ có thể đã xảy ra. Việc đọc thông báo tác vụ bị gián đoạn không xoá các tài nguyên này.';
+
+  @override
+  String get phoneResourceRecoveryRetry => 'Thử lại xác minh tài nguyên';
+
+  @override
+  String get phoneSkillSectionTitle => 'Tác vụ đã xong và skill';
+
+  @override
+  String get phoneSkillAskAfterSuccess => 'Hỏi lưu thành skill sau khi tác vụ thành công';
+
+  @override
+  String get phoneSkillAskAfterSuccessHint =>
+      'Mặc định tắt. Tác vụ vừa xong sẽ hỏi một lần khi trang này đang hiển thị. Bạn cũng có thể tự chọn tác vụ.';
+
+  @override
+  String phoneSkillTask(int taskId, int steps) {
+    return 'Tác vụ $taskId · $steps bước';
+  }
+
+  @override
+  String get phoneSkillCandidateHint =>
+      'Hãy kiểm tra kết quả thực tế trước; công cụ trả về thành công không chứng minh mục tiêu đã đạt được.';
+
+  @override
+  String get phoneSkillSaveAction => 'Lưu thành skill';
+
+  @override
+  String get phoneSkillConfirmGoal => 'Tác vụ này có đạt mục tiêu của bạn không?';
+
+  @override
+  String get phoneSkillConfirmGoalBody =>
+      'Hãy kiểm tra kết quả thực tế. Sau khi bạn xác nhận mới tạo bản nháp để xem và sửa trước khi lưu.';
+
+  @override
+  String get phoneSkillGoalDone => 'Đã đạt mục tiêu · Xem bản nháp';
+
+  @override
+  String get phoneSkillPrivacyHint =>
+      'Bản nháp chỉ được xử lý trên máy này. Không nhập mật khẩu, khoá hay mã xác minh. Ở phiên bản này, văn bản tự do trở thành tham số; việc xoá hay sắp xếp lại bước vẫn được giữ. Hãy xem bản xem trước cuối cùng.';
+
+  @override
+  String get phoneSkillGoal => 'Mục tiêu';
+
+  @override
+  String get phoneSkillPrerequisites => 'Điều kiện cần (ứng dụng, phiên bản, trạng thái đăng nhập)';
+
+  @override
+  String phoneSkillStep(int number) {
+    return 'Bước gốc $number';
+  }
+
+  @override
+  String get phoneSkillCheckpoint => 'Sau bước này cần thấy gì';
+
+  @override
+  String get phoneSkillMoveUp => 'Chuyển bước lên';
+
+  @override
+  String get phoneSkillMoveDown => 'Chuyển bước xuống';
+
+  @override
+  String get phoneSkillUpdatePreview => 'Cập nhật bản xem trước đã ẩn thông tin mật';
+
+  @override
+  String get phoneSkillPreviewTitle => 'Toàn bộ nội dung sẽ được lưu';
+
+  @override
+  String get phoneSkillParameterizedHint =>
+      'Văn bản tự do đã được thay bằng tham số; khi dùng skill này cần điền và kiểm tra lại.';
+
+  @override
+  String get phoneSkillFinalConfirmation => 'Tôi đã xem bản xem trước đầy đủ hiện tại và đồng ý lưu phiên bản này.';
+
+  @override
+  String get phoneSkillSavedBody =>
+      'Tệp đã được ghi vào thư mục skill cục bộ. Chưa xác minh danh sách skill đã được engine làm mới; hãy kiểm tra trang Skill.';
+
+  @override
+  String get phoneSkillWriting => 'Đang ghi skill';
+
+  @override
+  String get phoneSkillCannotCancel =>
+      'Lần ghi có thể đã tới bước commit và không chắc huỷ được. Đóng chỉ đóng trang này; tệp đã commit vẫn sẽ được lưu.';
+
+  @override
+  String get phoneSkillKeepWaiting => 'Tiếp tục xem';
+
+  @override
+  String get phoneSkillCheckWrite => 'Kiểm tra kết quả ghi';
+
+  @override
+  String get phoneSkillStale => 'Bản nháp này không còn hiệu lực. Hãy đóng lại và chọn lại tác vụ.';
+
+  @override
+  String get phoneSkillSensitive => 'Nội dung sửa có thông tin nhạy cảm. Hãy gỡ bỏ trước khi cập nhật bản xem trước.';
+
+  @override
+  String get phoneSkillInvalid =>
+      'Nội dung sửa hoặc thứ tự bước vượt quá giới hạn. Hãy rút ngắn văn bản và giữ ít nhất một bước.';
+
+  @override
+  String get phoneSkillWriteFailed =>
+      'Không ghi được tệp. Hãy kiểm tra runtime và bộ nhớ cục bộ; sửa và cập nhật bản xem trước rồi mới xác nhận lưu lần nữa.';
+
+  @override
+  String get phoneSkillUnavailable =>
+      'Hiện không dùng được bản nháp skill. Hãy kiểm tra trạng thái engine cục bộ rồi thử lại.';
 
   @override
   String get phoneModeTitle => 'DSH xác nhận thế nào';
@@ -15123,6 +16158,181 @@ class L10nVi extends L10n {
   String get searchKwRemoteCompactHistory => 'thu gọn,lịch sử,công cụ,truyền,băng thông,từ xa';
 
   @override
+  String get remotePairEntry => 'Quét mã để ghép nối máy tính';
+
+  @override
+  String get remotePairEntryHint =>
+      'Quét mã mà plugin Remote hiển thị trên máy tính của bạn. Không cần tài khoản Remote; hãy đăng nhập DeepSeek trước.';
+
+  @override
+  String get remotePairAddComputer => 'Thêm máy tính bằng cách quét mã';
+
+  @override
+  String get remotePairTitle => 'Ghép nối máy tính';
+
+  @override
+  String get remotePairSubtitle =>
+      'Không cần tài khoản Remote. Mật khẩu DeepSeek và token đăng nhập của bạn không bao giờ được gửi đi.';
+
+  @override
+  String get remotePairNeedsDeepSeek => 'Hãy đăng nhập DeepSeek trước';
+
+  @override
+  String get remotePairNeedsDeepSeekBody =>
+      'Ghép nối cần tài khoản DeepSeek đã đăng nhập trên DSH Go. Chỉ ID tài khoản được gửi kèm để gắn nhãn cho điện thoại này; không có mật khẩu, cookie hay token.';
+
+  @override
+  String get remotePairScanHint => 'Hướng camera vào mã ghép nối mà plugin Remote hiển thị trên máy tính của bạn';
+
+  @override
+  String get remotePairPasteLink => 'Dán liên kết ghép nối';
+
+  @override
+  String get remotePairPasteEmpty => 'Không có liên kết ghép nối trong bộ nhớ tạm';
+
+  @override
+  String get remotePairScannerFailed => 'Trình đọc mã QR không khả dụng. Hãy dán liên kết ghép nối để tiếp tục.';
+
+  @override
+  String get remotePairFromImage => 'Từ thư viện ảnh';
+
+  @override
+  String get remotePairImageNoCode => 'Không tìm thấy mã QR trong ảnh đó';
+
+  @override
+  String get remotePairCameraDenied =>
+      'Không có quyền truy cập camera. Hãy bật trong cài đặt hệ thống, hoặc dùng “Từ thư viện ảnh” hay “Dán liên kết ghép nối”.';
+
+  @override
+  String get remotePairCameraFailed => 'Không mở được camera. Hãy dùng “Từ thư viện ảnh” hoặc “Dán liên kết ghép nối”.';
+
+  @override
+  String get remotePairReading => 'Đang đọc mã ghép nối…';
+
+  @override
+  String get remotePairConfirmTitle => 'Kết nối tới máy tính này?';
+
+  @override
+  String get remotePairComputer => 'Máy tính';
+
+  @override
+  String get remotePairServer => 'Máy chủ';
+
+  @override
+  String get remotePairFingerprint => 'Dấu vân tay máy tính';
+
+  @override
+  String get remotePairFingerprintHint =>
+      'Hãy kiểm tra xem có khớp với dấu vân tay trong plugin Remote trên máy tính của bạn trước khi tiếp tục.';
+
+  @override
+  String get remotePairConfirm => 'Đúng là máy tính này, ghép nối';
+
+  @override
+  String get remotePairNotThis => 'Không phải máy này, quét lại';
+
+  @override
+  String get remotePairClaiming => 'Đang tạo mã xác minh…';
+
+  @override
+  String get remotePairCodeTitle => 'Nhập mã 8 chữ số này trên máy tính';
+
+  @override
+  String remotePairCodeSemantics(String digits) {
+    return 'Mã xác minh $digits';
+  }
+
+  @override
+  String get remotePairCodeHint =>
+      'Nhập mã vào plugin Remote trên máy tính của bạn, rồi bấm “Xác nhận ghép nối”. Không cần làm gì thêm trên điện thoại.';
+
+  @override
+  String get remotePairOneAttempt =>
+      'Chỉ một lần thử: nhập sai mã là lần ghép nối này kết thúc, và bạn sẽ cần mã mới trên máy tính.';
+
+  @override
+  String remotePairWaiting(String countdown) {
+    return 'Đang đợi máy tính · còn $countdown';
+  }
+
+  @override
+  String get remotePairApproved => 'Máy tính đã xác nhận. Đang hoàn tất…';
+
+  @override
+  String get remotePairCodeExpired => 'Mã đã hết hạn. Hãy tạo mã ghép nối mới trên máy tính.';
+
+  @override
+  String remotePairConnecting(String name) {
+    return 'Đã ghép nối. Đang kết nối tới $name…';
+  }
+
+  @override
+  String get remotePairFailedTitle => 'Không ghép nối được';
+
+  @override
+  String remotePairOtherServerBody(String server) {
+    return 'Mã này đến từ $server, không phải máy chủ Remote mà DSH Go đang dùng. Chuyển sang đó và tiếp tục? Mỗi máy chủ giữ đăng nhập riêng.';
+  }
+
+  @override
+  String get remotePairSwitchServer => 'Chuyển máy chủ và tiếp tục';
+
+  @override
+  String get remotePairScanAgain => 'Quét lại';
+
+  @override
+  String get remotePairErrInvalidCode => 'Đây không phải mã ghép nối của DSH Go';
+
+  @override
+  String get remotePairErrOtherServer => 'Mã này đến từ một máy chủ Remote khác';
+
+  @override
+  String get remotePairErrUnsupported => 'Máy chủ Remote này chưa hỗ trợ ghép nối bằng quét mã';
+
+  @override
+  String get remotePairErrExpired => 'Mã đã hết hạn hoặc đã được dùng. Hãy tạo mã ghép nối mới trên máy tính.';
+
+  @override
+  String get remotePairErrCodeRejected =>
+      'Máy tính đã nhập sai mã nên lần ghép nối này kết thúc. Hãy tạo mã ghép nối mới trên máy tính và quét lại.';
+
+  @override
+  String get remotePairErrCancelled => 'Đã huỷ ghép nối';
+
+  @override
+  String get remotePairErrAccountConflict =>
+      'Điện thoại này đang đăng nhập một tài khoản Remote khác với tài khoản của máy tính. Đăng nhập đó được giữ nguyên; để chuyển, hãy đăng xuất khỏi Remote trước.';
+
+  @override
+  String get remotePairErrIdentity =>
+      'Thông tin ghép nối không còn khớp với máy tính này hoặc điện thoại này nên đã dừng. Hãy tạo mã ghép nối mới trên máy tính.';
+
+  @override
+  String get remotePairErrHostLimit => 'Tài khoản này đã đạt số máy tính tối đa';
+
+  @override
+  String get remotePairErrNetwork => 'Không kết nối được tới máy chủ Remote. Hãy kiểm tra mạng và thử lại.';
+
+  @override
+  String get remotePairErrFailed => 'Ghép nối chưa hoàn tất. Hãy quét lại.';
+
+  @override
+  String remotePairSwitchFailedTitle(String name) {
+    return 'Đã ghép nối với $name';
+  }
+
+  @override
+  String get remotePairSwitchFailedBody =>
+      'Nhưng không chuyển sang được. Hãy thử lại, hoặc chọn máy tính đó trong “Máy chủ từ xa”.';
+
+  @override
+  String get remotePairDone => 'Xong';
+
+  @override
+  String get remotePairErrPinSave =>
+      'Đã ghép nối, nhưng điện thoại này không lưu được dấu vân tay của máy tính. Hãy tạo mã ghép nối mới trên máy tính và quét lại.';
+
+  @override
   String get stateWorkspaceFilesHint => 'Tệp đã tải lên không gian làm việc hiện tại:';
 
   @override
@@ -15232,6 +16442,26 @@ class L10nVi extends L10n {
 
   @override
   String get askAiQuestionRemote => 'Làm sao kết nối máy tính hoặc máy chủ của mình, và khác gì so với điện thoại này?';
+
+  @override
+  String get phoneRuntimeUpgradeBase =>
+      'Không xác nhận được engine mới tương thích với môi trường Linux của bạn nên quá trình cập nhật đã dừng. Môi trường và các công cụ đã cài không bị xoá. Hãy sao lưu đầy đủ rồi liên hệ người bảo trì để chuyển đổi; đừng đặt lại hay gỡ cài đặt ứng dụng.';
+
+  @override
+  String get phoneRuntimeUpgradeManifest =>
+      'Không thể nhận diện an toàn manifest cập nhật runtime. Quá trình cập nhật đã dừng và môi trường của bạn được giữ nguyên. Hãy kiểm tra tệp APK và liên hệ người bảo trì; đừng đặt lại môi trường.';
+
+  @override
+  String get phoneRuntimeUpgradeInterrupted =>
+      'Quá trình nâng cấp runtime chưa hoàn tất. Dữ liệu và trạng thái khôi phục của bạn đã được giữ lại. Hãy thử lại cài đặt. Nếu vẫn lỗi, hãy xuất gói chẩn đoán và liên hệ người bảo trì; đừng đặt lại hay xoá các thư mục khôi phục.';
+
+  @override
+  String get phoneRuntimeUpgradeSymlink =>
+      'Một đường dẫn hệ thống đã bị thay bằng liên kết tuỳ chỉnh nên không thể cập nhật môi trường một cách an toàn. Môi trường của bạn được giữ nguyên. Hãy sao lưu và liên hệ người bảo trì.';
+
+  @override
+  String get phoneRuntimeUpgradeRunning =>
+      'Chưa xác nhận engine hoặc tiến trình còn sót lại đã dừng. Quá trình cập nhật chưa bắt đầu. Hãy dừng engine cục bộ và chờ dọn dẹp xong rồi thử lại; đừng đặt lại môi trường.';
 
   @override
   String get schemaDocumentationTitle => 'Mô tả trường';
@@ -15591,6 +16821,103 @@ class L10nVi extends L10n {
   @override
   String get searchKwQuickPanel =>
       'vuốt,vuốt trái,lối tắt,cử chỉ,bảng nhanh,truy cập nhanh,danh mục,danh mục tuỳ chỉnh';
+
+  @override
+  String get selfUpdateTransport => 'Tuyến cài đặt';
+
+  @override
+  String get selfUpdateSystem => 'Cài đặt thông thường (mặc định)';
+
+  @override
+  String get selfUpdateShizuku => 'Shizuku';
+
+  @override
+  String get selfUpdateAdb => 'ADB cục bộ';
+
+  @override
+  String get selfUpdateSecurityNote =>
+      'Mọi tuyến vẫn phải tuân theo chữ ký APK và chính sách bảo mật của Android cùng nhà sản xuất. Không đảm bảo bỏ qua được bước quét. Không hỗ trợ root; các tuyến không bao giờ tự chuyển sau khi thất bại.';
+
+  @override
+  String get selfUpdateNativeConfirm =>
+      'Chỉ bản cập nhật đã xác minh của ứng dụng này mới được cài, và vẫn cần xác nhận native. Cấp quyền cho Shizuku không có nghĩa là đồng ý cài đặt. Điều khiển điện thoại và AI Shell vẫn có thể để tắt.';
+
+  @override
+  String get selfUpdateAuthorize => 'Yêu cầu Shizuku cấp quyền cho cập nhật';
+
+  @override
+  String get selfUpdateRefresh => 'Làm mới trạng thái kênh';
+
+  @override
+  String selfUpdateShizukuStatus(String status) {
+    return 'Shizuku: $status';
+  }
+
+  @override
+  String get selfUpdateReady => 'Đã cấp quyền';
+
+  @override
+  String get selfUpdatePermissionRequired => 'Hãy cài đặt, khởi động và cấp quyền cho Shizuku trước';
+
+  @override
+  String get selfUpdateUnsupportedIdentity => 'Chỉ hỗ trợ shell UID 2000; không hỗ trợ root và các định danh khác';
+
+  @override
+  String get selfUpdateAdbHint =>
+      'Dùng định danh gỡ lỗi không dây đã ghép nối của điện thoại này; chỉ kết nối khi bạn nhấn Cài đặt. Nếu chưa ghép nối, hãy mở trang ghép nối Android Shell có sẵn mà không cần bật Điều khiển điện thoại hay AI Shell. Mã ghép nối và cổng không được lưu hay ghi vào nhật ký.';
+
+  @override
+  String get selfUpdatePairing => 'Mở hướng dẫn ghép nối Android Shell';
+
+  @override
+  String get selfUpdateAdbPaired => 'ADB cục bộ đã ghép nối';
+
+  @override
+  String get selfUpdateAdbNotPaired => 'ADB cục bộ chưa ghép nối';
+
+  @override
+  String get selfUpdatePendingTitle => 'Đang xác minh kết quả cài đặt';
+
+  @override
+  String get selfUpdatePendingMessage =>
+      'Quá trình cài đặt có thể vẫn đang chạy. Không có thử lại tự động hay chuyển tuyến. Hãy kiểm tra thông báo của hệ thống, rồi đọc trạng thái cài đặt thực tế.';
+
+  @override
+  String get selfUpdateUnknownTitle => 'Không rõ kết quả cài đặt';
+
+  @override
+  String get selfUpdateUnknownMessage =>
+      'Hết thời gian chờ, mất kết nối hay tiến trình đã thoát không chứng minh là thất bại. Không có thử lại tự động hay chuyển tuyến. Hãy đọc trạng thái cài đặt thực tế trước.';
+
+  @override
+  String get selfUpdateReadResult => 'Đọc trạng thái cài đặt thực tế';
+
+  @override
+  String get selfUpdateVerifiedTitle => 'Đã xác minh phiên bản đã cài';
+
+  @override
+  String selfUpdateVerifiedVersion(String version, int code) {
+    return 'Phiên bản hiện tại $version (bản dựng $code), đã được lớp native xác minh.';
+  }
+
+  @override
+  String get selfUpdateFailedTitle => 'Cài đặt chưa hoàn tất';
+
+  @override
+  String get selfUpdateFailedMessage =>
+      'Lớp native báo lần cài đặt này thất bại. Hãy kiểm tra thông báo của hệ thống và mã lỗi, rồi chủ động chọn tuyến cài đặt.';
+
+  @override
+  String selfUpdateErrorCode(String code) {
+    return 'Mã lỗi: $code';
+  }
+
+  @override
+  String get selfUpdateEndWaiting => 'Kết thúc lần chờ này';
+
+  @override
+  String get selfUpdateEndWaitingNote =>
+      'Chỉ kết thúc lần chờ này sau khi đã xác nhận hệ thống không còn cài đặt. Xoá bản ghi không huỷ cài đặt của hệ thống, cũng không thử lại hay chuyển tuyến. Sẽ cần xác nhận native lại.';
 
   @override
   String get shellDeletePermanently => 'Xoá vĩnh viễn';
@@ -17682,6 +19009,10 @@ class L10nVi extends L10n {
   String get stateTerminalStartFailed => 'Không khởi động được terminal';
 
   @override
+  String get stateTerminalDisabledOnHost =>
+      'Máy tính này đã tắt terminal từ xa. Hãy bật “Terminal” trong cài đặt Remote trên máy tính rồi thử lại.';
+
+  @override
   String get stateTileDuotone => 'Hai tông màu';
 
   @override
@@ -18583,7 +19914,7 @@ class L10nVi extends L10n {
 
   @override
   String viewUiExpectedChildren(int limit) {
-    return 'Cần một mảng từ 1 đến $limit component';
+    return 'Cần một mảng từ 1 đến $limit thành phần';
   }
 
   @override

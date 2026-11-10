@@ -306,6 +306,7 @@
   "stateSubscriptionDisconnected": "Engine đã mất kết nối. Hãy thử lại sau.",
   "stateTerminalLimit": "Đã đạt giới hạn terminal",
   "stateTerminalStartFailed": "Không khởi động được terminal",
+  "stateTerminalDisabledOnHost": "Máy tính này đã tắt terminal từ xa. Hãy bật “Terminal” trong cài đặt Remote trên máy tính rồi thử lại.",
   "stateTileDuotone": "Hai tông màu",
   "stateTileGeometric": "Hình học tối giản",
   "stateTileGlassy": "Kính mờ",

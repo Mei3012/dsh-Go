@@ -508,7 +508,7 @@
   "phoneBackgroundParallelChoice": "{limit} chỗ cho tác vụ nền",
   "phoneBackgroundParallelOff": "Kênh nền đang tắt. Lưu tuỳ chọn này không bật kênh lên.",
   "phoneBackgroundParallelUnsupported": "Thiết bị này hiện không dùng được thao tác nền.",
-  "phoneBackgroundParallelConnection": "Cần có kết nối thì tác vụ nền mới mới có thể bắt đầu.",
+  "phoneBackgroundParallelConnection": "Cần có kết nối thì mới bắt đầu được một tác vụ nền mới.",
   "phoneBackgroundParallelBusy": "Kênh nền đang được chuẩn bị hoặc bảo trì. Tác vụ mới chưa thể bắt đầu.",
   "phoneBackgroundParallelRecovery": "Hãy xử lý việc khôi phục tài nguyên nền còn dang dở trước khi bắt đầu tác vụ mới.",
   "phoneBackgroundParallelPeer": "Dịch vụ đang kết nối không hỗ trợ các khả năng nền cần thiết.",

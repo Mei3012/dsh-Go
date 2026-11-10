@@ -4,12 +4,13 @@
 //
 // DSH 0.2.1 already ships subscription sign-in. The built-in `llm-pi-ai` adapter
 // registers one `ctx.authorization` flow per pi-ai provider that has a login
-// (`llm-pi-ai/openai-codex` for ChatGPT, `llm-pi-ai/anthropic` for Claude), and
-// the flow stores pi-ai's OAuth grant through `ctx.credentials` (credentials-local
-// writes it to `$DSH_HOME/.credentials.yaml` as `{kind: grant, payload}`). What
-// 0.2.1 lacks is a client-facing way to start one, so this module does what the
-// DeepSeek account platform does internally (`ctx.authorization.begin`) and turns
-// the flow's notices and prompts into a small polled state machine:
+// (`llm-pi-ai/openai-codex` for ChatGPT, `llm-pi-ai/anthropic` for Claude,
+// `llm-pi-ai/xai` for Grok), and the flow stores pi-ai's OAuth grant through
+// `ctx.credentials` (credentials-local writes it to `$DSH_HOME/.credentials.yaml`
+// as `{kind: grant, payload}`). What 0.2.1 lacks is a client-facing way to start
+// one, so this module does what the DeepSeek account platform does internally
+// (`ctx.authorization.begin`) and turns the flow's notices and prompts into a
+// small polled state machine:
 //
 //   begin → starting → open | device | prompt → done | failed | cancelled
 //                       (answer() replies to a pending paste prompt)
@@ -36,6 +37,12 @@ export const PROVIDERS = Object.freeze({
     displayName: 'Claude',
     // pi-ai's Claude login prefers 53692 and falls back to any free port (the
     // redirect URI names the port it got), so a callback is always possible.
+    callbackPort: undefined,
+  }),
+  xai: Object.freeze({
+    displayName: 'Grok',
+    // pi-ai's xAI login is an RFC 8628 device-code flow: no redirect reaches
+    // the engine, so there is no port to reserve or probe.
     callbackPort: undefined,
   }),
 })
@@ -157,10 +164,17 @@ function jwtClaims(token) {
 
 /**
  * Who is signed in, when the grant says. A ChatGPT access token is a JWT whose
- * claims carry the email and plan; a Claude token is opaque.
+ * claims carry the email and plan; the xAI token is an OIDC JWT with an `email`
+ * claim; a Claude token is opaque.
  */
 export function accountOf(provider, payload) {
-  if (provider !== 'openai-codex' || !isObject(payload)) return undefined
+  if (!isObject(payload)) return undefined
+  if (provider === 'xai') {
+    const claims = jwtClaims(payload.access)
+    const email = isObject(claims) ? claims.email : undefined
+    return typeof email === 'string' && email.includes('@') ? email : undefined
+  }
+  if (provider !== 'openai-codex') return undefined
   const claims = jwtClaims(payload.access)
   if (!claims) return undefined
   const profile = claims['https://api.openai.com/profile']

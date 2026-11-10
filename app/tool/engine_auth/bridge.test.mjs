@@ -232,6 +232,7 @@ test('open → done: browser callback, then the route is declared and list shows
     providers: [
       { id: 'openai-codex', signedIn: true, account: 'tester@example.invalid' },
       { id: 'anthropic', signedIn: false },
+      { id: 'xai', signedIn: false },
     ],
   })
   assert.equal(settings.mutations.length, 1, 'list does not re-declare an existing route')
@@ -408,6 +409,22 @@ test('device code notices map to the device phase', async () => {
   bridge.cancel(attemptId)
 })
 
+test('Grok signs in through the xai flow and declares the Grok route', async () => {
+  const { bridge, credentials, settings, authorization } = setup()
+  // pi-ai's xAI login is a device-code flow: a code, a URL, no browser callback.
+  authorization.register('llm-pi-ai/xai', async ({ notify }) => {
+    notify({ url: 'https://auth.x.ai/device', code: 'WXYZ-9876' })
+    await new Promise(() => {})
+  })
+  const { attemptId } = await bridge.begin('xai')
+  const device = await waitFor(bridge, attemptId, phase('device'))
+  assert.equal(device.userCode, 'WXYZ-9876')
+  assert.equal(device.url, 'https://auth.x.ai/device')
+  assert.equal(credentials.records.has('llm-pi-ai/xai'), false)
+  assert.equal(settings.user.providers?.xai, undefined, 'no route before the grant lands')
+  bridge.cancel(attemptId)
+})
+
 test('signOut removes the bridge route and the grant, keeps a user API-key route and api-key records', async () => {
   const { bridge, credentials, settings } = setup()
   credentials.records.set('llm-pi-ai/openai-codex', { kind: 'grant', payload: { type: 'oauth', access: CODEX_TOKEN } })
@@ -426,6 +443,7 @@ test('signOut removes the bridge route and the grant, keeps a user API-key route
     providers: [
       { id: 'openai-codex', signedIn: false },
       { id: 'anthropic', signedIn: false },
+      { id: 'xai', signedIn: false },
     ],
   })
 })
@@ -447,7 +465,7 @@ test('signOut leaves a route declared by a lower layer, cancels a live attempt, 
 
 test('list repairs a missing route for a stored grant and never declares one without it', async () => {
   const { bridge, credentials, settings } = setup()
-  assert.deepEqual((await bridge.list()).providers.map((p) => p.signedIn), [false, false])
+  assert.deepEqual((await bridge.list()).providers.map((p) => p.signedIn), [false, false, false])
   assert.equal(settings.mutations.length, 0)
   credentials.records.set('llm-pi-ai/anthropic', { kind: 'grant', payload: { type: 'oauth', access: 'opaque' } })
   const { providers } = await bridge.list()

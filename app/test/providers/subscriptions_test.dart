@@ -154,7 +154,10 @@ void main() {
       );
       final row = tester.getRect(find.widgetWithText(ListPageRow, 'Claude'));
       final card = tester.getRect(find.ancestor(of: find.text('Claude'), matching: find.byType(Material)).first);
-      final capsule = tester.getRect(find.widgetWithText(FilledButton, '登录').last);
+      // Claude's own capsule: a third row (Grok) also carries one.
+      final capsule = tester.getRect(
+        find.descendant(of: find.widgetWithText(ListPageRow, 'Claude'), matching: find.byType(FilledButton)),
+      );
       expect(card.right - capsule.right, moreOrLessEquals(16, epsilon: 0.6));
       expect(capsule.center.dy, moreOrLessEquals(row.center.dy, epsilon: 0.6));
       expect(capsule.height, moreOrLessEquals(LoginCapsule.height, epsilon: 0.6));

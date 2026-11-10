@@ -112,7 +112,7 @@ try {
 
   console.log('== appAuth/list on a fresh home')
   const fresh = await value('appAuth/list')
-  check(JSON.stringify(fresh) === JSON.stringify({ providers: [{ id: 'openai-codex', signedIn: false }, { id: 'anthropic', signedIn: false }] }), `list: ${JSON.stringify(fresh)}`)
+  check(JSON.stringify(fresh) === JSON.stringify({ providers: [{ id: 'openai-codex', signedIn: false }, { id: 'anthropic', signedIn: false }, { id: 'xai', signedIn: false }] }), `list: ${JSON.stringify(fresh)}`)
   check(Object.keys((await piAi()).value.providers ?? {}).length === 0, 'no llm-pi-ai route before sign-in')
 
   for (const [provider, authorize, port] of [

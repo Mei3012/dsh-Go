@@ -19,9 +19,11 @@ import '../theme/app_icons.dart';
 import '../theme/theme.dart';
 
 /// A subscription's monogram letter (a plain letter, no brand mark).
+/// Grok takes K, not G: ChatGPT already uses G and two rows would look alike.
 String subscriptionLetter(Subscription s) => switch (s) {
   Subscription.chatgpt => 'G',
   Subscription.claude => 'C',
+  Subscription.grok => 'K',
 };
 
 /// Opens the sign-in sheet; true once signed in. Closing it cancels the

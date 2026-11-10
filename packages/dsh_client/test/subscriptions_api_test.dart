@@ -52,8 +52,10 @@ void main() {
     test('wire ids are the pi-ai provider ids', () {
       expect(Subscription.chatgpt.wire, 'openai-codex');
       expect(Subscription.claude.wire, 'anthropic');
+      expect(Subscription.grok.wire, 'xai');
       expect(Subscription.fromWire('openai-codex'), Subscription.chatgpt);
       expect(Subscription.fromWire('anthropic'), Subscription.claude);
+      expect(Subscription.fromWire('xai'), Subscription.grok);
       expect(Subscription.fromWire('openai'), isNull);
       expect(Subscription.fromWire(null), isNull);
     });
